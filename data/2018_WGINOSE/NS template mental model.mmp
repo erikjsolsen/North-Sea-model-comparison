@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mentalmodeler >
+<info >
+<name ><![CDATA[NS Template]]></name>
+<author ><![CDATA[ WGINOSE 2018]]></author>
+<description ><![CDATA[Template for regional mental models. 
+
+First developed for Skagerrak, Norfolk Bank and Long Forties]]></description>
+<version ><![CDATA[1.1]]></version>
+<date ><![CDATA[Mon Apr 16 2018 16:28:28 GMT+0200 (Romance Daylight Time)]]></date>
+</info>
+<groupNames >
+</groupNames>
+<concepts >
+<concept >
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Demersal Fisheries]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[3]]></group>
+<x ><![CDATA[1056.2]]></x>
+<y ><![CDATA[692.5]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[OBJ: Economic benefits]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[OBJ: Employment]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[26]]></id>
+<name ><![CDATA[OBJ: Quality of life]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[OBJ: Biodiversity]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[23]]></id>
+<name ><![CDATA[OBJ: CFP - MSY ]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[OBJ: Good Environmental Status]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[Marine litter]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Noise]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Seabed abrasion]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Extraction of species]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[2]]></id>
+<name ><![CDATA[Dredging]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[3]]></group>
+<x ><![CDATA[1045.85]]></x>
+<y ><![CDATA[427.35]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[OBJ: Economic benefits]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[OBJ: Employment]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[OBJ: Biodiversity]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[23]]></id>
+<name ><![CDATA[OBJ: CFP - MSY ]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[OBJ: Good Environmental Status]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Noise]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[20]]></id>
+<name ><![CDATA[Extraction minerals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[19]]></id>
+<name ><![CDATA[Smothering]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Seabed abrasion]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Extraction of species]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[3]]></id>
+<name ><![CDATA[Hard Structures]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[3]]></group>
+<x ><![CDATA[1015.6]]></x>
+<y ><![CDATA[290.2]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[OBJ: Economic benefits]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[OBJ: Employment]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[OBJ: Biodiversity]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.29]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[OBJ: Good Environmental Status]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Noise]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[20]]></id>
+<name ><![CDATA[Extraction minerals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[19]]></id>
+<name ><![CDATA[Smothering]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Seabed abrasion]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[4]]></id>
+<name ><![CDATA[Disposal]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[3]]></group>
+<x ><![CDATA[1027.8]]></x>
+<y ><![CDATA[165.2]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[OBJ: Economic benefits]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[OBJ: Employment]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[OBJ: Biodiversity]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[23]]></id>
+<name ><![CDATA[OBJ: CFP - MSY ]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[OBJ: Good Environmental Status]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Noise]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.29]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[19]]></id>
+<name ><![CDATA[Smothering]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[5]]></id>
+<name ><![CDATA[Pelagic fisheries]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[3]]></group>
+<x ><![CDATA[1044.2]]></x>
+<y ><![CDATA[571.25]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[OBJ: Economic benefits]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[OBJ: Employment]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[OBJ: Biodiversity]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[23]]></id>
+<name ><![CDATA[OBJ: CFP - MSY ]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[OBJ: Good Environmental Status]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[Marine litter]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Noise]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Extraction of species]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[6]]></id>
+<name ><![CDATA[Benthos (incl habitat)]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[5]]></group>
+<x ><![CDATA[588.35]]></x>
+<y ><![CDATA[783.35]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[7]]></id>
+<name ><![CDATA[Pelagic habitat]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[5]]></group>
+<x ><![CDATA[380.05]]></x>
+<y ><![CDATA[739.7]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Zooplankton]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Pelagic fish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[8]]></id>
+<name ><![CDATA[Demersal fish]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[2]]></group>
+<x ><![CDATA[215.45]]></x>
+<y ><![CDATA[50.8]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Zooplankton]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[11]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[12]]></id>
+<name ><![CDATA[Marine Mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[10]]></id>
+<name ><![CDATA[Shellfish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Pelagic fish]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[2]]></group>
+<x ><![CDATA[60.4]]></x>
+<y ><![CDATA[201.1]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Zooplankton]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[11]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[12]]></id>
+<name ><![CDATA[Marine Mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[10]]></id>
+<name ><![CDATA[Shellfish]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[2]]></group>
+<x ><![CDATA[333.2]]></x>
+<y ><![CDATA[273.3]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[8]]></id>
+<name ><![CDATA[Demersal fish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[11]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[2]]></group>
+<x ><![CDATA[49.25]]></x>
+<y ><![CDATA[537.5]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Pelagic fish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[8]]></id>
+<name ><![CDATA[Demersal fish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[12]]></id>
+<name ><![CDATA[Marine Mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[2]]></group>
+<x ><![CDATA[75.6]]></x>
+<y ><![CDATA[682.25]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Zooplankton]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Pelagic fish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[8]]></id>
+<name ><![CDATA[Demersal fish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.48]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Zooplankton]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[2]]></group>
+<x ><![CDATA[269.2]]></x>
+<y ><![CDATA[506.7]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Pelagic fish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[8]]></id>
+<name ><![CDATA[Demersal fish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[12]]></id>
+<name ><![CDATA[Marine Mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[Marine litter]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[4]]></group>
+<x ><![CDATA[709.85]]></x>
+<y ><![CDATA[62.55]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[12]]></id>
+<name ><![CDATA[Marine Mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[11]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Zooplankton]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[10]]></id>
+<name ><![CDATA[Shellfish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Pelagic fish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[8]]></id>
+<name ><![CDATA[Demersal fish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[15]]></id>
+<name ><![CDATA[Shipping]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[3]]></group>
+<x ><![CDATA[1025.95]]></x>
+<y ><![CDATA[54.95]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[OBJ: Economic benefits]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[OBJ: Employment]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[OBJ: Biodiversity]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[OBJ: Good Environmental Status]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[Marine litter]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Noise]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[16]]></id>
+<name ><![CDATA[Physical environment]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[5]]></group>
+<x ><![CDATA[90.35]]></x>
+<y ><![CDATA[787.05]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Zooplankton]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[7]]></id>
+<name ><![CDATA[Pelagic habitat]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.54]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[6]]></id>
+<name ><![CDATA[Benthos (incl habitat)]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Extraction of species]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[4]]></group>
+<x ><![CDATA[714.3]]></x>
+<y ><![CDATA[674.25]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[8]]></id>
+<name ><![CDATA[Demersal fish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Pelagic fish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[10]]></id>
+<name ><![CDATA[Shellfish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[12]]></id>
+<name ><![CDATA[Marine Mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[11]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Seabed abrasion]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[4]]></group>
+<x ><![CDATA[725.7]]></x>
+<y ><![CDATA[577.55]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[8]]></id>
+<name ><![CDATA[Demersal fish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[10]]></id>
+<name ><![CDATA[Shellfish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[6]]></id>
+<name ><![CDATA[Benthos (incl habitat)]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.48]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[19]]></id>
+<name ><![CDATA[Smothering]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[4]]></group>
+<x ><![CDATA[726.15]]></x>
+<y ><![CDATA[474.85]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[8]]></id>
+<name ><![CDATA[Demersal fish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[10]]></id>
+<name ><![CDATA[Shellfish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[6]]></id>
+<name ><![CDATA[Benthos (incl habitat)]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[20]]></id>
+<name ><![CDATA[Extraction minerals]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[4]]></group>
+<x ><![CDATA[715.7]]></x>
+<y ><![CDATA[362.8]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[8]]></id>
+<name ><![CDATA[Demersal fish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[10]]></id>
+<name ><![CDATA[Shellfish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[6]]></id>
+<name ><![CDATA[Benthos (incl habitat)]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Noise]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[4]]></group>
+<x ><![CDATA[726.85]]></x>
+<y ><![CDATA[234.8]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[12]]></id>
+<name ><![CDATA[Marine Mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Pelagic fish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[8]]></id>
+<name ><![CDATA[Demersal fish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[7]]></id>
+<name ><![CDATA[Pelagic habitat]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[OBJ: Good Environmental Status]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[1438.6]]></x>
+<y ><![CDATA[618.35]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[23]]></id>
+<name ><![CDATA[OBJ: CFP - MSY ]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[1442.9]]></x>
+<y ><![CDATA[505.1]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[OBJ: Biodiversity]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[1437.85]]></x>
+<y ><![CDATA[396.25]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[OBJ: Employment]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[1432.25]]></x>
+<y ><![CDATA[278.5]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[26]]></id>
+<name ><![CDATA[OBJ: Quality of life]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[1427.1]]></x>
+<y ><![CDATA[159.85]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[OBJ: Economic benefits]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[1412.45]]></x>
+<y ><![CDATA[31.3]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+</relationships>
+</concept>
+</concepts>
+<scenarios >
+<scenario >
+<name ><![CDATA[Scenario]]></name>
+<concepts >
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Demersal Fisheries]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[2]]></id>
+<name ><![CDATA[Dredging]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[3]]></id>
+<name ><![CDATA[Hard Structures]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[4]]></id>
+<name ><![CDATA[Disposal]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[5]]></id>
+<name ><![CDATA[Pelagic fisheries]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+</concepts>
+</scenario>
+</scenarios>
+</mentalmodeler>

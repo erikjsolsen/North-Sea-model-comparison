@@ -1,0 +1,158 @@
+---
+title: "EwE circular graphs"
+author: "Erik Olsen"
+date: "8/23/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Libraries
+
+```{r libraries}
+
+library(tidyverse)
+library(readxl)
+library(circlize)
+library(reshape2)
+library(viridis)
+library(wesanderson)
+
+```
+
+## Data
+
+```{r load data}
+
+## North Sea EwE
+ns <- read_excel("./NS diet matrix EwE key run.xlsx", sheet=5)
+ns <- as.data.frame(ns)
+rownames(ns) <- ns[,1]
+
+#convert to matrix
+ns1 <- data.matrix(ns[,c(2:81)], rownames.force = ns[,1])
+
+
+## Kattegat data
+katt <- read_excel("./Kattegat_diet_matrix.xlsx", sheet=1)
+katt <- as.data.frame(katt)
+rownames(katt) <- katt[,1]
+
+katt1 <- data.matrix(katt[,c(2:37)], rownames.force = katt[,1])
+
+```
+
+### Color Adjacency matrix
+```{r color adjacency matrix}
+#mm_e <- melt(ns1)
+#mm_e$cols <- c("darkorange")
+#colnames(mm_e) <- c("v1", "v2", "value", "color")
+
+#change colors based on value
+#mm_e <- within(mm_e, color[value==0] <- c("royalblue3"))
+#col_ns <- mm_e[,c(1,2,4)]
+```
+
+
+
+## North Sea EwE Circle plot
+
+```{r Nort Sea EwE circle plot}
+circos.clear()
+
+## Colors for links
+#col_mat = rand_color(length(ns1), transparency = 0.5)
+#col_fun = colorRamp2(range(ns1), c("lightskyblue2", "navyblue"), transparency = 0.5)
+col_fun = colorRamp2(range(log10(ns1+1)), c("lightskyblue2", "navyblue"), transparency = 0.5)
+
+## Colors for sectors (grid)
+ns_col <- data.frame(rownames(ns1))
+colnames(ns_col) <- "Focus"
+ns_palette <-  viridis(nrow(ns_col))
+ns_col$Color <- ns_palette
+
+# covert to vector with names
+ns_colors <- ns_col$Color
+names(ns_colors) <- ns_col$Focus
+
+## Colors for sectors (grid) grouped by trophic group
+#p2 <- viridis(12)
+#p2 <- brewer.pal(12, "Set3")
+p2 <- wes_palette("Darjeeling1", 12, type = "continuous")
+ns_colors <- c(rep(p2[1],3), rep(p2[2],2), rep(p2[3],8), rep(p2[4],36), rep(p2[5],1), rep(p2[6],4), rep(p2[7],4), rep(p2[8],5), rep(p2[9],2), rep(p2[10],1), rep(p2[11],2),  rep(p2[12],12))
+names(ns_colors) <- ns_col$Focus
+
+## Create plot
+png("ns_ewe.png",width = 1600, height=1600)
+print(chordDiagram(log10(ns1+1), directional=1, direction.type = c("diffHeight", "arrows"), link.arr.type = "big.arrow",scale=TRUE, order=rownames(ns1), reduce=0,
+                   grid.col = ns_colors,
+                   col=col_fun,
+                   annotationTrack="grid",
+                   annotationTrackHeight = c(0.03, 0.1),
+                   preAllocateTracks= list(track.height=0.4)))
+
+print(circos.trackPlotRegion(track.index=1, panel.fun= function (x,y){
+  xlim = get.cell.meta.data("xlim")
+  ylim = get.cell.meta.data("ylim")
+  sector.name = get.cell.meta.data("sector.index")
+  circos.text(mean(xlim),ylim[1],sector.name,facing="clockwise", niceFacing=TRUE, adj =c(0,0.5), cex=1.5)
+}, bg.border=NA))
+
+print(title("North Sea EwE model", cex=2))
+
+print(legend(x=-1.1,y = 1.09,legend = c("Mammals", "Seabirds", "Sharks & rays", "Bony fish", "Cephalopods", "Zooplankton", "Crustaceans", "Benthos", "Microflora", "Phytoplankton", "Detritus", "Fisheries" ),lty= c(1,1,1,1,1,1,1,1,1,1,1,1), lwd=c(25,25,25,25,25,25,25,25,25,25,25,25),              col =p2, ncol=1, cex = 1.5, bg = NULL, box.col=NULL, bty = "n"))
+
+```
+
+## Kattegat ewe Circle plot
+```{r Kattegat EwE circle plot}
+circos.clear()
+
+#col_mat = rand_color(length(ns1), transparency = 0.5)
+# col_fun2 = colorRamp2(range(katt1), c("lightskyblue2", "navyblue"), transparency = 0.5)
+col_fun2 = colorRamp2(range(log10(katt1+1)), c("lightskyblue2", "navyblue"), transparency = 0.5)
+
+ns_col2 <- data.frame(rownames(katt1))
+colnames(ns_col2) <- "Focus"
+
+ns_palette <-  viridis(nrow(ns_col2))
+ns_col2$Color <- ns_palette
+
+#ns_col2 <- matrix(ns_col$Color,dimnames=list(ns_col$Focus,"Color"))
+
+#vector with names
+ns_colors2 <- ns_col2$Color
+names(ns_colors2) <- ns_col2$Focus
+
+## Colors for sectors (grid) grouped by trophic group
+#p2 <- viridis(12)
+#p2 <- brewer.pal(12, "Set3")
+p2 <- wes_palette("Darjeeling1", 12, type = "continuous")
+ns_colors <- c(rep(p2[1],1), rep(p2[2],2), rep(p2[3],14), rep(p2[4],4), rep(p2[5],2), rep(p2[6],2), rep(p2[7],1), rep(p2[8],1), rep(p2[9],1), rep(p2[10],1), rep(p2[11],1),  rep(p2[12],9))
+names(ns_colors) <- ns_col2$Focus
+
+
+#create plot
+png("katt_ewe.png",width = 1400, height=1400)
+print(chordDiagram(log10(katt1+1), directional=1, direction.type = c("diffHeight", "arrows"), link.arr.type = "big.arrow",scale=TRUE, order=rownames(katt1),reduce=0,
+                   grid.col = ns_colors,
+                   col=col_fun2,
+                   annotationTrack="grid",
+                   annotationTrackHeight = c(0.03, 0.1),
+                   preAllocateTracks= list(track.height=0.4)))
+
+print(circos.trackPlotRegion(track.index=1, panel.fun= function (x,y){
+  xlim = get.cell.meta.data("xlim")
+  ylim = get.cell.meta.data("ylim")
+  sector.name = get.cell.meta.data("sector.index")
+  circos.text(mean(xlim),ylim[1],sector.name,facing="clockwise", niceFacing=TRUE, adj =c(0,0.5), cex=1.5)
+}, bg.border=NA))
+
+print(title("Kattegat EwE model", cex=2))
+
+print(legend(x=-1.1,y = 1.09,legend = c("Seabirds", "Mammals", "Fish", "Zooplankton", "Benthos", "Crustaceans", "Molluscs", "Phytoplankton", "Microalgea", "Detritus", "Import", "Fisheries" ),lty= c(1,1,1,1,1,1,1,1,1,1,1,1), lwd=c(25,25,25,25,25,25,25,25,25,25,25,25),              col =p2, ncol=1, cex = 1.5, bg = NULL, box.col=NULL, bty = "n"))
+
+```
+

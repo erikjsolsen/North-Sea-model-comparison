@@ -1,0 +1,2736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mentalmodeler >
+<info >
+<name ><![CDATA[Skagerrak]]></name>
+<author ><![CDATA[ WGINOSE 2018]]></author>
+<description ><![CDATA[Template for regional mental models. 
+
+First developed for Skagerrak, Norfolk Bank and Long Forties]]></description>
+<version ><![CDATA[1.1]]></version>
+<date ><![CDATA[Mon Apr 16 2018 16:28:28 GMT+0200 (Romance Daylight Time)]]></date>
+</info>
+<groupNames >
+</groupNames>
+<concepts >
+<concept >
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Demersal Fisheries]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[3]]></group>
+<x ><![CDATA[1165]]></x>
+<y ><![CDATA[556.5]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[OBJ: Economic benefits]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[OBJ: Employment]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[26]]></id>
+<name ><![CDATA[OBJ: Quality of life]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[OBJ: Biodiversity]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[23]]></id>
+<name ><![CDATA[OBJ: CFP - MSY ]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[OBJ: Good Environmental Status]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[Marine litter]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Noise]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Seabed abrasion]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Extraction of species]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[5]]></id>
+<name ><![CDATA[Pelagic fisheries]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[3]]></group>
+<x ><![CDATA[1174.6]]></x>
+<y ><![CDATA[354.45]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[OBJ: Economic benefits]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[OBJ: Employment]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[OBJ: Biodiversity]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[23]]></id>
+<name ><![CDATA[OBJ: CFP - MSY ]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[OBJ: Good Environmental Status]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[Marine litter]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Noise]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Extraction of species]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[Marine litter]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[4]]></group>
+<x ><![CDATA[1009.05]]></x>
+<y ><![CDATA[114.55]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[46]]></id>
+<name ><![CDATA[Mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.07]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[48]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.42]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Whiting]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.18]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[43]]></id>
+<name ><![CDATA[Plaice]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.22]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Haddock]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.16]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[40]]></id>
+<name ><![CDATA[Norway pout]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[Cod]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[51]]></id>
+<name ><![CDATA[Herring]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.13]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[47]]></id>
+<name ><![CDATA[Shellfish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.18]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[35]]></id>
+<name ><![CDATA[c. hel]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.24]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C. fin]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.24]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[45]]></id>
+<name ><![CDATA[Benthos]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[55]]></id>
+<name ><![CDATA[MPA/Biodiversity]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[15]]></id>
+<name ><![CDATA[Shipping]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[3]]></group>
+<x ><![CDATA[1197.95]]></x>
+<y ><![CDATA[145.35]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[OBJ: Economic benefits]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[OBJ: Employment]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[OBJ: Biodiversity]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[OBJ: Good Environmental Status]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[Marine litter]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Noise]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Extraction of species]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[4]]></group>
+<x ><![CDATA[985.5]]></x>
+<y ><![CDATA[619.85]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Whiting]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.36]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[Cod]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.42]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[47]]></id>
+<name ><![CDATA[Shellfish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.36]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[43]]></id>
+<name ><![CDATA[Plaice]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.36]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[40]]></id>
+<name ><![CDATA[Norway pout]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.49]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Haddock]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.42]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Pollock]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.53]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[41]]></id>
+<name ><![CDATA[Sand eel]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.42]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[42]]></id>
+<name ><![CDATA[Sprat]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.36]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[51]]></id>
+<name ><![CDATA[Herring]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.42]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[52]]></id>
+<name ><![CDATA[Mackerel]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.33]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[55]]></id>
+<name ><![CDATA[MPA/Biodiversity]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.16]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[53]]></id>
+<name ><![CDATA[Tourism]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.13]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Seabed abrasion]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[4]]></group>
+<x ><![CDATA[998.5]]></x>
+<y ><![CDATA[443.95]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[45]]></id>
+<name ><![CDATA[Benthos]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.44]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[47]]></id>
+<name ><![CDATA[Shellfish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.47]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[43]]></id>
+<name ><![CDATA[Plaice]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.47]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[55]]></id>
+<name ><![CDATA[MPA/Biodiversity]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.2]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Noise]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[4]]></group>
+<x ><![CDATA[1016.45]]></x>
+<y ><![CDATA[264.4]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[46]]></id>
+<name ><![CDATA[Mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.29]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[48]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.13]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[55]]></id>
+<name ><![CDATA[MPA/Biodiversity]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.16]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[OBJ: Good Environmental Status]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[1350.6]]></x>
+<y ><![CDATA[619.95]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[23]]></id>
+<name ><![CDATA[OBJ: CFP - MSY ]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[1362.1]]></x>
+<y ><![CDATA[516.3]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[OBJ: Biodiversity]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[1362.65]]></x>
+<y ><![CDATA[401.05]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[OBJ: Employment]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[1365.85]]></x>
+<y ><![CDATA[267.3]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[26]]></id>
+<name ><![CDATA[OBJ: Quality of life]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[1351.1]]></x>
+<y ><![CDATA[162.25]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[OBJ: Economic benefits]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[1346.85]]></x>
+<y ><![CDATA[40.1]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[32]]></id>
+<name ><![CDATA[Temp]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[0]]></group>
+<x ><![CDATA[306.5]]></x>
+<y ><![CDATA[742.8]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Phyto]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.33]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[Cod]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.16]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C. fin]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[35]]></id>
+<name ><![CDATA[c. hel]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.22]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C. fin]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[0]]></group>
+<x ><![CDATA[230.5]]></x>
+<y ><![CDATA[537.2]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[51]]></id>
+<name ><![CDATA[Herring]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.49]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[Cod]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[0]]></group>
+<x ><![CDATA[757.7]]></x>
+<y ><![CDATA[187.6]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[45]]></id>
+<name ><![CDATA[Benthos]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.2]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[51]]></id>
+<name ><![CDATA[Herring]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.38]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Whiting]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.24]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[43]]></id>
+<name ><![CDATA[Plaice]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.33]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[42]]></id>
+<name ><![CDATA[Sprat]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.33]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[41]]></id>
+<name ><![CDATA[Sand eel]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.31]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[46]]></id>
+<name ><![CDATA[Mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.29]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[35]]></id>
+<name ><![CDATA[c. hel]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[0]]></group>
+<x ><![CDATA[421.7]]></x>
+<y ><![CDATA[532.4]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[42]]></id>
+<name ><![CDATA[Sprat]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.38]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[52]]></id>
+<name ><![CDATA[Mackerel]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.42]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Phyto]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[0]]></group>
+<x ><![CDATA[472.1]]></x>
+<y ><![CDATA[653.2]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[35]]></id>
+<name ><![CDATA[c. hel]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.4]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C. fin]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.36]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[45]]></id>
+<name ><![CDATA[Benthos]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.47]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Haddock]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[0]]></group>
+<x ><![CDATA[139.3]]></x>
+<y ><![CDATA[142.8]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[45]]></id>
+<name ><![CDATA[Benthos]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.13]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Pollock]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.33]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Pollock]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[0]]></group>
+<x ><![CDATA[170.5]]></x>
+<y ><![CDATA[309.2]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[46]]></id>
+<name ><![CDATA[Mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.38]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Haddock]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.33]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[40]]></id>
+<name ><![CDATA[Norway pout]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.29]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Whiting]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[0]]></group>
+<x ><![CDATA[781.7]]></x>
+<y ><![CDATA[74.8]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[45]]></id>
+<name ><![CDATA[Benthos]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.24]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[Cod]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.44]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[42]]></id>
+<name ><![CDATA[Sprat]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.42]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[41]]></id>
+<name ><![CDATA[Sand eel]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[46]]></id>
+<name ><![CDATA[Mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.4]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[40]]></id>
+<name ><![CDATA[Norway pout]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[0]]></group>
+<x ><![CDATA[381.7]]></x>
+<y ><![CDATA[245.2]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[51]]></id>
+<name ><![CDATA[Herring]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.33]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Pollock]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.44]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[46]]></id>
+<name ><![CDATA[Mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.36]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[41]]></id>
+<name ><![CDATA[Sand eel]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[0]]></group>
+<x ><![CDATA[182.5]]></x>
+<y ><![CDATA[438]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[Cod]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.44]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Whiting]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.42]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[48]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.49]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[46]]></id>
+<name ><![CDATA[Mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.22]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[42]]></id>
+<name ><![CDATA[Sprat]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[0]]></group>
+<x ><![CDATA[418.5]]></x>
+<y ><![CDATA[401.2]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[35]]></id>
+<name ><![CDATA[c. hel]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.18]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[Cod]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.36]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Whiting]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.47]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[48]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.4]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[46]]></id>
+<name ><![CDATA[Mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.36]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[43]]></id>
+<name ><![CDATA[Plaice]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[0]]></group>
+<x ><![CDATA[540.1]]></x>
+<y ><![CDATA[150.8]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[45]]></id>
+<name ><![CDATA[Benthos]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.29]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[Cod]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.29]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[45]]></id>
+<name ><![CDATA[Benthos]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[0]]></group>
+<x ><![CDATA[667.3]]></x>
+<y ><![CDATA[613.2]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[43]]></id>
+<name ><![CDATA[Plaice]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.44]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[Cod]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.47]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[47]]></id>
+<name ><![CDATA[Shellfish]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.36]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Haddock]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.4]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Whiting]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.44]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[46]]></id>
+<name ><![CDATA[Mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[0]]></group>
+<x ><![CDATA[455.3]]></x>
+<y ><![CDATA[26.8]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Haddock]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.18]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[40]]></id>
+<name ><![CDATA[Norway pout]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.22]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Whiting]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.24]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[43]]></id>
+<name ><![CDATA[Plaice]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.2]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[Cod]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.38]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[42]]></id>
+<name ><![CDATA[Sprat]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.18]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[51]]></id>
+<name ><![CDATA[Herring]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.29]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Pollock]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.27]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[52]]></id>
+<name ><![CDATA[Mackerel]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.2]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[47]]></id>
+<name ><![CDATA[Shellfish]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[0]]></group>
+<x ><![CDATA[736.9]]></x>
+<y ><![CDATA[390]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[45]]></id>
+<name ><![CDATA[Benthos]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.18]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[48]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[0]]></group>
+<x ><![CDATA[224.1]]></x>
+<y ><![CDATA[30.8]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[42]]></id>
+<name ><![CDATA[Sprat]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.36]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[51]]></id>
+<name ><![CDATA[Herring]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.38]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[41]]></id>
+<name ><![CDATA[Sand eel]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.33]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[50]]></id>
+<name ><![CDATA[Nutrients]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[0]]></group>
+<x ><![CDATA[616.9]]></x>
+<y ><![CDATA[733.2]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Phyto]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.53]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[51]]></id>
+<name ><![CDATA[Herring]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[0]]></group>
+<x ><![CDATA[580.1]]></x>
+<y ><![CDATA[343.6]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C. fin]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.24]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[Cod]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.44]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Haddock]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.44]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[48]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.49]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[46]]></id>
+<name ><![CDATA[Mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.44]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[52]]></id>
+<name ><![CDATA[Mackerel]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[0]]></group>
+<x ><![CDATA[339.2]]></x>
+<y ><![CDATA[120.4]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[48]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.29]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[46]]></id>
+<name ><![CDATA[Mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.33]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[53]]></id>
+<name ><![CDATA[Tourism]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[3]]></group>
+<x ><![CDATA[1196.1]]></x>
+<y ><![CDATA[238]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[OBJ: Economic benefits]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.53]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[OBJ: Employment]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.33]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[26]]></id>
+<name ><![CDATA[OBJ: Quality of life]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.2]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[Marine litter]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.11]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[46]]></id>
+<name ><![CDATA[Mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.04]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[48]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.13]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[55]]></id>
+<name ><![CDATA[MPA/Biodiversity]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.24]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[54]]></id>
+<name ><![CDATA[Rec. Fisheries]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[3]]></group>
+<x ><![CDATA[1180.1]]></x>
+<y ><![CDATA[448.4]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[OBJ: Economic benefits]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.13]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[OBJ: Employment]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.11]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[23]]></id>
+<name ><![CDATA[OBJ: CFP - MSY ]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.2]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[OBJ: Good Environmental Status]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.11]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Extraction of species]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.16]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[Marine litter]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.13]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[55]]></id>
+<name ><![CDATA[MPA/Biodiversity]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[3]]></group>
+<x ><![CDATA[1175.3]]></x>
+<y ><![CDATA[67.2]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[OBJ: Biodiversity]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.44]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[26]]></id>
+<name ><![CDATA[OBJ: Quality of life]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.29]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[OBJ: Economic benefits]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.2]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[56]]></id>
+<name ><![CDATA[Aquaculture]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[3]]></group>
+<x ><![CDATA[1187.3]]></x>
+<y ><![CDATA[659.6]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[OBJ: Economic benefits]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.33]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[OBJ: Employment]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.11]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[26]]></id>
+<name ><![CDATA[OBJ: Quality of life]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.11]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[OBJ: Good Environmental Status]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.24]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[OBJ: Biodiversity]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.2]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[Marine litter]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.31]]></influence>
+</relationship>
+</relationships>
+</concept>
+</concepts>
+<scenarios >
+<scenario >
+<name ><![CDATA[Scenario]]></name>
+<concepts >
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[-0.65]]></influence>
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Demersal Fisheries]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[-0.65]]></influence>
+<id ><![CDATA[5]]></id>
+<name ><![CDATA[Pelagic fisheries]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[Marine litter]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[15]]></id>
+<name ><![CDATA[Shipping]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Extraction of species]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Seabed abrasion]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Noise]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[OBJ: Good Environmental Status]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[23]]></id>
+<name ><![CDATA[OBJ: CFP - MSY ]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[OBJ: Biodiversity]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[OBJ: Employment]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[26]]></id>
+<name ><![CDATA[OBJ: Quality of life]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[OBJ: Economic benefits]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0.46]]></influence>
+<id ><![CDATA[32]]></id>
+<name ><![CDATA[Temp]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C. fin]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[Cod]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[35]]></id>
+<name ><![CDATA[c. hel]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Phyto]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Haddock]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Pollock]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Whiting]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[40]]></id>
+<name ><![CDATA[Norway pout]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[41]]></id>
+<name ><![CDATA[Sand eel]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[42]]></id>
+<name ><![CDATA[Sprat]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[43]]></id>
+<name ><![CDATA[Plaice]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[45]]></id>
+<name ><![CDATA[Benthos]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[46]]></id>
+<name ><![CDATA[Mammals]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[47]]></id>
+<name ><![CDATA[Shellfish]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[48]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[50]]></id>
+<name ><![CDATA[Nutrients]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[51]]></id>
+<name ><![CDATA[Herring]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[52]]></id>
+<name ><![CDATA[Mackerel]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[53]]></id>
+<name ><![CDATA[Tourism]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[54]]></id>
+<name ><![CDATA[Rec. Fisheries]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[55]]></id>
+<name ><![CDATA[MPA/Biodiversity]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+</concepts>
+</scenario>
+<scenario >
+<name ><![CDATA[Scenario]]></name>
+<concepts >
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[-0.18]]></influence>
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Demersal Fisheries]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[-0.14]]></influence>
+<id ><![CDATA[5]]></id>
+<name ><![CDATA[Pelagic fisheries]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[Marine litter]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[15]]></id>
+<name ><![CDATA[Shipping]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Extraction of species]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Seabed abrasion]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Noise]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[OBJ: Good Environmental Status]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[23]]></id>
+<name ><![CDATA[OBJ: CFP - MSY ]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[OBJ: Biodiversity]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[OBJ: Employment]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[26]]></id>
+<name ><![CDATA[OBJ: Quality of life]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[OBJ: Economic benefits]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0.37]]></influence>
+<id ><![CDATA[32]]></id>
+<name ><![CDATA[Temp]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C. fin]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[Cod]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[35]]></id>
+<name ><![CDATA[c. hel]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Phyto]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Haddock]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Pollock]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Whiting]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[40]]></id>
+<name ><![CDATA[Norway pout]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[41]]></id>
+<name ><![CDATA[Sand eel]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[42]]></id>
+<name ><![CDATA[Sprat]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[43]]></id>
+<name ><![CDATA[Plaice]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[45]]></id>
+<name ><![CDATA[Benthos]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[46]]></id>
+<name ><![CDATA[Mammals]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[47]]></id>
+<name ><![CDATA[Shellfish]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[48]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[50]]></id>
+<name ><![CDATA[Nutrients]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[51]]></id>
+<name ><![CDATA[Herring]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[52]]></id>
+<name ><![CDATA[Mackerel]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0.54]]></influence>
+<id ><![CDATA[53]]></id>
+<name ><![CDATA[Tourism]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[54]]></id>
+<name ><![CDATA[Rec. Fisheries]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[55]]></id>
+<name ><![CDATA[MPA/Biodiversity]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+</concepts>
+</scenario>
+<scenario >
+<name ><![CDATA[Scenario]]></name>
+<concepts >
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[1]]></influence>
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Demersal Fisheries]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[1]]></influence>
+<id ><![CDATA[5]]></id>
+<name ><![CDATA[Pelagic fisheries]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[Marine litter]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[15]]></id>
+<name ><![CDATA[Shipping]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Extraction of species]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Seabed abrasion]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Noise]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[OBJ: Good Environmental Status]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[23]]></id>
+<name ><![CDATA[OBJ: CFP - MSY ]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[OBJ: Biodiversity]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[OBJ: Employment]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[26]]></id>
+<name ><![CDATA[OBJ: Quality of life]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[OBJ: Economic benefits]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[32]]></id>
+<name ><![CDATA[Temp]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C. fin]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[Cod]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[35]]></id>
+<name ><![CDATA[c. hel]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Phyto]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Haddock]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Pollock]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Whiting]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[40]]></id>
+<name ><![CDATA[Norway pout]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[41]]></id>
+<name ><![CDATA[Sand eel]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[42]]></id>
+<name ><![CDATA[Sprat]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[43]]></id>
+<name ><![CDATA[Plaice]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[45]]></id>
+<name ><![CDATA[Benthos]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[46]]></id>
+<name ><![CDATA[Mammals]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[47]]></id>
+<name ><![CDATA[Shellfish]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[48]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[50]]></id>
+<name ><![CDATA[Nutrients]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[51]]></id>
+<name ><![CDATA[Herring]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[52]]></id>
+<name ><![CDATA[Mackerel]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[-0.35]]></influence>
+<id ><![CDATA[53]]></id>
+<name ><![CDATA[Tourism]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[-0.48]]></influence>
+<id ><![CDATA[54]]></id>
+<name ><![CDATA[Rec. Fisheries]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[55]]></id>
+<name ><![CDATA[MPA/Biodiversity]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+</concepts>
+</scenario>
+<scenario >
+<name ><![CDATA[Scenario]]></name>
+<concepts >
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[-0.52]]></influence>
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Demersal Fisheries]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[-0.52]]></influence>
+<id ><![CDATA[5]]></id>
+<name ><![CDATA[Pelagic fisheries]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[Marine litter]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[15]]></id>
+<name ><![CDATA[Shipping]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Extraction of species]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Seabed abrasion]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Noise]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[OBJ: Good Environmental Status]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[23]]></id>
+<name ><![CDATA[OBJ: CFP - MSY ]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[OBJ: Biodiversity]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[OBJ: Employment]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[26]]></id>
+<name ><![CDATA[OBJ: Quality of life]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[OBJ: Economic benefits]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[32]]></id>
+<name ><![CDATA[Temp]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C. fin]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[Cod]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[35]]></id>
+<name ><![CDATA[c. hel]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Phyto]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Haddock]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Pollock]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Whiting]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[40]]></id>
+<name ><![CDATA[Norway pout]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[41]]></id>
+<name ><![CDATA[Sand eel]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[42]]></id>
+<name ><![CDATA[Sprat]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[43]]></id>
+<name ><![CDATA[Plaice]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[45]]></id>
+<name ><![CDATA[Benthos]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[46]]></id>
+<name ><![CDATA[Mammals]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[47]]></id>
+<name ><![CDATA[Shellfish]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[48]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[50]]></id>
+<name ><![CDATA[Nutrients]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[51]]></id>
+<name ><![CDATA[Herring]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[52]]></id>
+<name ><![CDATA[Mackerel]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[53]]></id>
+<name ><![CDATA[Tourism]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[54]]></id>
+<name ><![CDATA[Rec. Fisheries]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0.42]]></influence>
+<id ><![CDATA[55]]></id>
+<name ><![CDATA[MPA/Biodiversity]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[56]]></id>
+<name ><![CDATA[Aquaculture]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+</concepts>
+</scenario>
+<scenario >
+<name ><![CDATA[Scenario]]></name>
+<concepts >
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[-0.52]]></influence>
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Demersal Fisheries]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[-0.56]]></influence>
+<id ><![CDATA[5]]></id>
+<name ><![CDATA[Pelagic fisheries]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[Marine litter]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[15]]></id>
+<name ><![CDATA[Shipping]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Extraction of species]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Seabed abrasion]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Noise]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[OBJ: Good Environmental Status]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[23]]></id>
+<name ><![CDATA[OBJ: CFP - MSY ]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[OBJ: Biodiversity]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[OBJ: Employment]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[26]]></id>
+<name ><![CDATA[OBJ: Quality of life]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[OBJ: Economic benefits]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[32]]></id>
+<name ><![CDATA[Temp]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C. fin]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[Cod]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[35]]></id>
+<name ><![CDATA[c. hel]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Phyto]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Haddock]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Pollock]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Whiting]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[40]]></id>
+<name ><![CDATA[Norway pout]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[41]]></id>
+<name ><![CDATA[Sand eel]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[42]]></id>
+<name ><![CDATA[Sprat]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[43]]></id>
+<name ><![CDATA[Plaice]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[45]]></id>
+<name ><![CDATA[Benthos]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[46]]></id>
+<name ><![CDATA[Mammals]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[47]]></id>
+<name ><![CDATA[Shellfish]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[48]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[50]]></id>
+<name ><![CDATA[Nutrients]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[51]]></id>
+<name ><![CDATA[Herring]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[52]]></id>
+<name ><![CDATA[Mackerel]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0.54]]></influence>
+<id ><![CDATA[53]]></id>
+<name ><![CDATA[Tourism]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[54]]></id>
+<name ><![CDATA[Rec. Fisheries]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0.59]]></influence>
+<id ><![CDATA[55]]></id>
+<name ><![CDATA[MPA/Biodiversity]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[]]></influence>
+<id ><![CDATA[56]]></id>
+<name ><![CDATA[Aquaculture]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+</concepts>
+</scenario>
+</scenarios>
+</mentalmodeler>

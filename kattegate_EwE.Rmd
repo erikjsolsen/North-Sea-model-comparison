@@ -1,0 +1,165 @@
+---
+title: "EwW kattegat 2020"
+author: "Erik Olsen"
+date: "30/9/2020"
+output: html_document
+---
+
+# Scenario analysis, Kattegat using Ecopath with Ecosim
+
+### Libraries
+```{r libraries, echo=FALSE, warning=FALSE}
+library(tidyr)
+library(readxl)
+library(ggplot2)
+library(data.table)
+library(dplyr)
+library(kableExtra)
+```
+
+## Import data
+### Kattegat
+```{r import data, echo=FALSE, warning=FALSE}
+#group and fleets tables
+gr <- read_excel("./data/Katt_EwE/Kattegat_groups and fleets.xlsx", sheet= "Groups", col_names  =FALSE)
+colnames(gr) <- c("gr", "name")
+fleets <- read_excel("./data/Katt_EwE/Kattegat_groups and fleets.xlsx", sheet= "fleets", col_names  =FALSE)
+colnames(fleets) <- c("gr", "name")
+
+catlist<-list.files("./data/Katt_EwE/Kattegat_WGINOSE")[1:7]
+scenarios <- c("baseline", "No fishing", "-50% demersal fishing", "+25% demersal fishing", "+75% demersal fishing","seal biomass X 10", "seal biomass X 2")
+
+
+#BIOMASS DATA
+#biomass baseline
+b_base <- read.table(paste("./data/Katt_EwE/Kattegat_WGINOSE/", catlist[1], "/biomass_annual.csv", sep=""), header=FALSE, dec=".", sep =",",skip=10)
+colnames(b_base) <- c("year", gr$name)
+b_base$scenario <- c("baseline")
+
+# biomass scenarios
+bscen <- c("b_f0", "b_btm50", "b_btp25", "b_btp75", "b_sx10", "b_sx2")
+
+for (i in 1:length(bscen)) { 
+  cc1 <- read.table(paste("./data/Katt_EwE/Kattegat_WGINOSE/", catlist[i+1], "/biomass_annual.csv", sep=""), header=FALSE, dec=".", sep =",",skip=10)
+  colnames(cc1) <- c("year", gr$name)
+  cc1$scenario <- c(scenarios[i+1])
+  #cc1$norm <- cc1$value/c_base$value
+  assign(bscen[i], cc1)
+}
+
+#biomass normalized & long-format
+b_norm <- cbind(b_base$year, b_f0$scenario, b_f0[,2:30]/b_base[,2:30])
+colnames(b_norm) <- c("year", "scenario", gr$name)
+slist <- list(b_btm50, b_btp25, b_btp75, b_sx2, b_sx10)
+
+for (i in 1:5) {  
+  bb <- cbind(as.data.frame(slist[i])$year, as.data.frame(slist[i])$scenario, as.data.frame(slist[i])[,2:30]/b_base[,2:30]) 
+  colnames(bb) <- c("year", "scenario", gr$name)
+  b_norm <- rbind(b_norm, bb)
+  }
+
+
+
+### CATCH DATA BY FLEET
+
+#catch baseline
+c_base <- read.table(paste("./data/Katt_EwE/Kattegat_WGINOSE/", catlist[1], "/catch-fleet-group_annual.csv", sep=""), header=FALSE, dec=".", sep =",",skip=10)
+colnames(c_base) <- c("year", "fleet", "group", "value")
+c_base$scenario <- c("baseline")
+
+# catch scenarios
+cscen <- c("c_f0", "c_btm50", "c_btp25", "c_btp75", "c_sx10", "c_sx2")
+
+for (i in 2:length(catlist)) { 
+  cc1 <- read.table(paste("./data/Katt_EwE/Kattegat_WGINOSE/", catlist[i], "/catch-fleet-group_annual.csv", sep=""), header=FALSE, dec=".", sep =",",skip=10)
+  colnames(cc1) <- c("year", "fleet", "group", "value")
+  cc1$scenario <- c(scenarios[i])
+  #cc1$norm <- cc1$value/c_base$value
+  assign(cscen[i-1], cc1)
+}
+
+#Fill inn with 0-catches for 'no-catch' scenario
+c_base$id <- paste(c_base$year, c_base$fleet, c_base$group, sep="")
+c_f0$id <- paste(c_f0$year, c_f0$fleet, c_f0$group, sep="")
+c_base$f0 <- 0
+c_base$f0 <- c_f0$value[match(c_base$id, c_f0$id)]
+c_f0a <- c_base[,c(1,2,3,7,5)]
+colnames(c_f0a)[4] <- c("value")
+c_f0a$scenario <- c("No fishing")
+
+
+# catch normalized
+c_f0a$norm <- c_f0a$value/c_base$value 
+c_btm50$norm <- c_btm50$value/c_base$value 
+c_btp25$norm <- c_btp25$value/c_base$value 
+c_btp75$norm <- c_btp75$value/c_base$value 
+c_sx2$norm <- c_sx2$value/c_base$value 
+c_sx10$norm <- c_sx10$value/c_base$value 
+
+#catch normalized combined long form data
+c_all <- rbind(c_f0a, c_btm50, c_btp25, c_btp75, c_sx2, c_sx10)
+c_all$fleet_n <- fleets$name[match(c_all$fleet, fleets$gr)]
+c_all$group_n <- gr$name[match(c_all$group, gr$gr)]
+
+
+```
+
+## Biomass time-series plots
+```{r biomass plots, echo=FALSE, warning=FALSE}
+
+b_norm.long <-b_norm %>% gather(Species, Value, -year, -scenario)
+
+biom.plot <- ggplot(b_norm.long, aes(year, Value, color=scenario))
+biom.plot + geom_line() + facet_wrap(~Species, scales="free_y") + theme_bw() + ggtitle("Biomass of species groups")
+ggsave("./figs/biomass species groups.png", width=16, height=8)
+
+```
+
+## Catch time-series plots
+```{r catch time-series plots, echo=FALSE, warning=FALSE}
+
+catch.plot <- ggplot(c_all, aes(year, norm, color=scenario))
+catch.plot + geom_line() + facet_grid(fleet_n ~ group_n) + theme_bw() + ggtitle("Catch by species groups and fleets")
+ggsave("./figs/catch groups fleets.png", width=16, height=8)
+
+
+```
+
+
+## Average change over time series (since 2019)
+### Biomass
+```{r biomass change table, echo=FALSE, warning=FALSE}
+b_norm <- data.table(b_norm)
+
+b_average <- b_norm[year>2019, lapply(.SD, mean), by = .(scenario), .SDcols = 3:31]
+
+b_average <- data.table::transpose(b_average, keep.names="rn")
+colnames(b_average) <- as.character(b_average[1,])
+b_average <- b_average[scenario!="scenario",]
+write.csv(b_average, "./figs/biomass Kattegat.csv")
+b_average %>% 
+  kable(format = "html", escape = F, rownames=TRUE) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed")) 
+```
+
+### Catches
+
+```{r catch changes over time table, echo=FALSE, warning=FALSE}
+c_norm <- c_all
+
+herring<-subset(c_all, group_n=="Herring" & scenario=="+75% demersal fishing")
+
+c_norm %>% group_by(scenario, group_n) %>%
+  summarise(avg=mean(norm, na.rm=TRUE)) %>%
+  spread(scenario, avg) %>% 
+  kable(format = "html", escape = F, rownames=TRUE) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed")) 
+
+c2 <- c_norm %>% group_by(scenario, group_n) %>%
+  summarise(avg=mean(norm, na.rm=TRUE)) %>%
+  spread(scenario, avg)
+
+  write.csv(c2, "./figs/catches Kattegat.csv")
+
+```
+

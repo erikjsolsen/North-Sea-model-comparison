@@ -1,0 +1,2593 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mentalmodeler >
+<info >
+<name ><![CDATA[Model]]></name>
+<author ><![CDATA[]]></author>
+<description ><![CDATA[]]></description>
+<version ><![CDATA[1.1]]></version>
+<date ><![CDATA[Fri Mar 22 2019 09:35:46 GMT+0100 (Central European Standard Time)]]></date>
+</info>
+<groupNames >
+</groupNames>
+<concepts >
+<concept >
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Saithe]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[5]]></group>
+<x ><![CDATA[146.5]]></x>
+<y ><![CDATA[177]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[2]]></id>
+<name ><![CDATA[Largemesh trawling]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Industrial fish (Norw.Pout)]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[16]]></id>
+<name ><![CDATA[Industrial fishery]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Maintainecosystem structure and function]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Marine mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Hake]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[2]]></id>
+<name ><![CDATA[Largemesh trawling]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[413.5]]></x>
+<y ><![CDATA[134]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Saithe]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Corals, sponges and seapens]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[10]]></id>
+<name ><![CDATA[Largest possible economic renewable long-term revenue]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Hake]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.25]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[3]]></id>
+<name ><![CDATA[BIOlOGY]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[5]]></group>
+<x ><![CDATA[204.5]]></x>
+<y ><![CDATA[30]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[4]]></id>
+<name ><![CDATA[HUMAN ACTIVITIES]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[409.5]]></x>
+<y ><![CDATA[18]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[5]]></id>
+<name ><![CDATA[OBJECTIVES]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[3]]></group>
+<x ><![CDATA[800.5]]></x>
+<y ><![CDATA[24]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[6]]></id>
+<name ><![CDATA[OCEANOGRAPHY]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[2]]></group>
+<x ><![CDATA[11.5]]></x>
+<y ><![CDATA[26]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Maintainecosystem structure and function]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[3]]></group>
+<x ><![CDATA[791.5]]></x>
+<y ><![CDATA[268]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[10]]></id>
+<name ><![CDATA[Largest possible economic renewable long-term revenue]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.49]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[Fisheries regulation]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[10]]></id>
+<name ><![CDATA[Largest possible economic renewable long-term revenue]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[3]]></group>
+<x ><![CDATA[796.5]]></x>
+<y ><![CDATA[110]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[Fisheries regulation]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[11]]></id>
+<name ><![CDATA[Maintain vulnerable species and nature types ]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[3]]></group>
+<x ><![CDATA[790.5]]></x>
+<y ><![CDATA[389]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[15]]></id>
+<name ><![CDATA[Protection/conservation]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Maintainecosystem structure and function]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Corals, sponges and seapens]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[5]]></group>
+<x ><![CDATA[73.5]]></x>
+<y ><![CDATA[542]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[11]]></id>
+<name ><![CDATA[Maintain vulnerable species and nature types ]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Maintainecosystem structure and function]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.25]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[MANAGEMENT MEASURES]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[4]]></group>
+<x ><![CDATA[628.5]]></x>
+<y ><![CDATA[24]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[15]]></id>
+<name ><![CDATA[Protection/conservation]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[4]]></group>
+<x ><![CDATA[611.5]]></x>
+<y ><![CDATA[537]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Corals, sponges and seapens]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[2]]></id>
+<name ><![CDATA[Largemesh trawling]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[16]]></id>
+<name ><![CDATA[Industrial fishery]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[19]]></id>
+<name ><![CDATA[Shrimp Trawling]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Pelagic fishery]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.24]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[Windpower]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[26]]></id>
+<name ><![CDATA[Oil & gas]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[Shipping]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.26]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[16]]></id>
+<name ><![CDATA[Industrial fishery]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[431.5]]></x>
+<y ><![CDATA[206]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Industrial fish (Norw.Pout)]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Saithe]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[10]]></id>
+<name ><![CDATA[Largest possible economic renewable long-term revenue]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Corals, sponges and seapens]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Hake]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.25]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Industrial fish (Norw.Pout)]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[5]]></group>
+<x ><![CDATA[193.5]]></x>
+<y ><![CDATA[297]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[16]]></id>
+<name ><![CDATA[Industrial fishery]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Saithe]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Maintainecosystem structure and function]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C.Fin]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[C. Hel]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Hake]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Marine mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Shrimp]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[5]]></group>
+<x ><![CDATA[246.5]]></x>
+<y ><![CDATA[76]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[19]]></id>
+<name ><![CDATA[Shrimp Trawling]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Maintainecosystem structure and function]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C.Fin]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.49]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[C. Hel]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[19]]></id>
+<name ><![CDATA[Shrimp Trawling]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[439.5]]></x>
+<y ><![CDATA[81]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Shrimp]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[10]]></id>
+<name ><![CDATA[Largest possible economic renewable long-term revenue]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.49]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Corals, sponges and seapens]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.26]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Herring]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[5]]></group>
+<x ><![CDATA[232.5]]></x>
+<y ><![CDATA[387]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Maintainecosystem structure and function]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C.Fin]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[C. Hel]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Pelagic fishery]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Marine mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.24]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Hake]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[mackerell]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[5]]></group>
+<x ><![CDATA[201.5]]></x>
+<y ><![CDATA[467]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Maintainecosystem structure and function]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C.Fin]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[C. Hel]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Pelagic fishery]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.49]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Marine mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Hake]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[Shipping]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[454.5]]></x>
+<y ><![CDATA[414]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Marine mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[28]]></id>
+<name ><![CDATA[Nasjonaløkonomi]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[mackerell]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Herring]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Industrial fish (Norw.Pout)]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Saithe]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Hake]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Shrimp]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[Windpower]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[641.5]]></x>
+<y ><![CDATA[439]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[28]]></id>
+<name ><![CDATA[Nasjonaløkonomi]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Corals, sponges and seapens]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[Shipping]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Pelagic fishery]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[16]]></id>
+<name ><![CDATA[Industrial fishery]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[2]]></id>
+<name ><![CDATA[Largemesh trawling]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[19]]></id>
+<name ><![CDATA[Shrimp Trawling]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[26]]></id>
+<name ><![CDATA[Oil & gas]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Marine mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Shrimp]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Hake]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Saithe]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Industrial fish (Norw.Pout)]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[35]]></id>
+<name ><![CDATA[Phytoplankton]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.26]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[26]]></id>
+<name ><![CDATA[Oil & gas]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[630.5]]></x>
+<y ><![CDATA[261]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Corals, sponges and seapens]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Saithe]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.28]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Industrial fish (Norw.Pout)]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Herring]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.24]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[mackerell]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.24]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[16]]></id>
+<name ><![CDATA[Industrial fishery]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[2]]></id>
+<name ><![CDATA[Largemesh trawling]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.53]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[19]]></id>
+<name ><![CDATA[Shrimp Trawling]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Shrimp]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[28]]></id>
+<name ><![CDATA[Nasjonaløkonomi]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.49]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[Windpower]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Marine mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[Fisheries regulation]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[4]]></group>
+<x ><![CDATA[614.5]]></x>
+<y ><![CDATA[71]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[19]]></id>
+<name ><![CDATA[Shrimp Trawling]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[2]]></id>
+<name ><![CDATA[Largemesh trawling]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[16]]></id>
+<name ><![CDATA[Industrial fishery]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Pelagic fishery]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[28]]></id>
+<name ><![CDATA[Nasjonaløkonomi]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[3]]></group>
+<x ><![CDATA[819.5]]></x>
+<y ><![CDATA[499]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[29]]></id>
+<name ><![CDATA[Temperature]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[2]]></group>
+<x ><![CDATA[4.5]]></x>
+<y ><![CDATA[61]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C.Fin]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[C. Hel]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[35]]></id>
+<name ><![CDATA[Phytoplankton]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Maintainecosystem structure and function]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Corals, sponges and seapens]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[mackerell]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Hake]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[32]]></id>
+<name ><![CDATA[Nutrients]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[2]]></group>
+<x ><![CDATA[0]]></x>
+<y ><![CDATA[381]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[35]]></id>
+<name ><![CDATA[Phytoplankton]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Corals, sponges and seapens]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.25]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C.Fin]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[5]]></group>
+<x ><![CDATA[86.5]]></x>
+<y ><![CDATA[121]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Herring]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[mackerell]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Industrial fish (Norw.Pout)]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Shrimp]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.49]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[C. Hel]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[5]]></group>
+<x ><![CDATA[27.5]]></x>
+<y ><![CDATA[205]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C.Fin]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Herring]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[mackerell]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.24]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Industrial fish (Norw.Pout)]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Shrimp]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.25]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[35]]></id>
+<name ><![CDATA[Phytoplankton]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[5]]></group>
+<x ><![CDATA[23.5]]></x>
+<y ><![CDATA[293]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[C. Hel]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C.Fin]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Hake]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[5]]></group>
+<x ><![CDATA[274.5]]></x>
+<y ><![CDATA[172]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Industrial fish (Norw.Pout)]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[2]]></id>
+<name ><![CDATA[Largemesh trawling]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[16]]></id>
+<name ><![CDATA[Industrial fishery]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Marine mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Herring]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[mackerell]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Saithe]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Pelagic fishery]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[429.5]]></x>
+<y ><![CDATA[286]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Herring]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[mackerell]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[10]]></id>
+<name ><![CDATA[Largest possible economic renewable long-term revenue]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Marine mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[5]]></group>
+<x ><![CDATA[0]]></x>
+<y ><![CDATA[479]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Hake]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Saithe]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Industrial fish (Norw.Pout)]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.25]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Herring]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.24]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[mackerell]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.26]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Maintainecosystem structure and function]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.26]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[5]]></group>
+<x ><![CDATA[307.5]]></x>
+<y ><![CDATA[538]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[mackerell]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Herring]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.51]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Industrial fish (Norw.Pout)]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Maintainecosystem structure and function]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[0.5]]></influence>
+</relationship>
+</relationships>
+</concept>
+<concept >
+<id ><![CDATA[40]]></id>
+<name ><![CDATA[Forurensing (landbasert)]]></name>
+<notes ><![CDATA[]]></notes>
+<units ><![CDATA[]]></units>
+<group ><![CDATA[1]]></group>
+<x ><![CDATA[427.5]]></x>
+<y ><![CDATA[475]]></y>
+<preferredState ><![CDATA[0]]></preferredState>
+<relationships >
+<relationship >
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Seabirds]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.5]]></influence>
+</relationship>
+<relationship >
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Marine mammals]]></name>
+<notes ><![CDATA[]]></notes>
+<confidence ><![CDATA[0]]></confidence>
+<influence ><![CDATA[-0.51]]></influence>
+</relationship>
+</relationships>
+</concept>
+</concepts>
+<scenarios >
+<scenario >
+<name ><![CDATA[Økt Olje og Gass]]></name>
+<concepts >
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Sei]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[2]]></id>
+<name ><![CDATA[Stormasket trålfiskeri]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[3]]></id>
+<name ><![CDATA[BILOGI]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[4]]></id>
+<name ><![CDATA[MENNESKELIG AKTIVITET]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[5]]></id>
+<name ><![CDATA[FORVALTNINGSMÅL]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[6]]></id>
+<name ><![CDATA[FYSIKK]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Opprettholde økosystemts struktur og funksjon]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[10]]></id>
+<name ><![CDATA[Størst mulig økonomisk fornybart langtidsutbytte]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[11]]></id>
+<name ><![CDATA[Ta vare på  sårbare arter og naturtyper]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Koraller, svamp, sjøfjær]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[TILTAK]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[15]]></id>
+<name ><![CDATA[Vern/Beskyttelse]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[16]]></id>
+<name ><![CDATA[Industrifiskeri]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Industrifisk (øyepål m.fl)]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Reker]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0.09]]></influence>
+<id ><![CDATA[19]]></id>
+<name ><![CDATA[Reketråling]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Sild]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[makrell]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[Skipstrafikk]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[Vindkraft]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[1]]></influence>
+<id ><![CDATA[26]]></id>
+<name ><![CDATA[Olje og gass]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[Fiskeriregulering]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[28]]></id>
+<name ><![CDATA[Nasjonaløkonomi]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[29]]></id>
+<name ><![CDATA[Temperatur]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[32]]></id>
+<name ><![CDATA[Næringssalter]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C.Fin]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[C. Hel]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[35]]></id>
+<name ><![CDATA[Phytoplankton]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Lysing]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Pelagisk fiskeri]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Sjøpattedyr]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Sjøfugl]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[40]]></id>
+<name ><![CDATA[Forurensing (landbasert)]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+</concepts>
+</scenario>
+<scenario >
+<name ><![CDATA[Økt Trålfiskeri]]></name>
+<concepts >
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Sei]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[1]]></influence>
+<id ><![CDATA[2]]></id>
+<name ><![CDATA[Stormasket trålfiskeri]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[3]]></id>
+<name ><![CDATA[BILOGI]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[4]]></id>
+<name ><![CDATA[MENNESKELIG AKTIVITET]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[5]]></id>
+<name ><![CDATA[FORVALTNINGSMÅL]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[6]]></id>
+<name ><![CDATA[FYSIKK]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Opprettholde økosystemts struktur og funksjon]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[10]]></id>
+<name ><![CDATA[Størst mulig økonomisk fornybart langtidsutbytte]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[11]]></id>
+<name ><![CDATA[Ta vare på  sårbare arter og naturtyper]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Koraller, svamp, sjøfjær]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[TILTAK]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[15]]></id>
+<name ><![CDATA[Vern/Beskyttelse]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[16]]></id>
+<name ><![CDATA[Industrifiskeri]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Industrifisk (øyepål m.fl)]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Reker]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[19]]></id>
+<name ><![CDATA[Reketråling]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Sild]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[makrell]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[Skipstrafikk]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[Vindkraft]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[26]]></id>
+<name ><![CDATA[Olje og gass]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[Fiskeriregulering]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[28]]></id>
+<name ><![CDATA[Nasjonaløkonomi]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[29]]></id>
+<name ><![CDATA[Temperatur]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[32]]></id>
+<name ><![CDATA[Næringssalter]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C.Fin]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[C. Hel]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[35]]></id>
+<name ><![CDATA[Phytoplankton]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Lysing]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Pelagisk fiskeri]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Sjøpattedyr]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Sjøfugl]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[40]]></id>
+<name ><![CDATA[Forurensing (landbasert)]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+</concepts>
+</scenario>
+<scenario >
+<name ><![CDATA[Økt vern]]></name>
+<concepts >
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Sei]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[2]]></id>
+<name ><![CDATA[Stormasket trålfiskeri]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[3]]></id>
+<name ><![CDATA[BILOGI]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[4]]></id>
+<name ><![CDATA[MENNESKELIG AKTIVITET]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[5]]></id>
+<name ><![CDATA[FORVALTNINGSMÅL]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[6]]></id>
+<name ><![CDATA[FYSIKK]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Opprettholde økosystemts struktur og funksjon]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[10]]></id>
+<name ><![CDATA[Størst mulig økonomisk fornybart langtidsutbytte]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[11]]></id>
+<name ><![CDATA[Ta vare på  sårbare arter og naturtyper]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Koraller, svamp, sjøfjær]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[TILTAK]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[1]]></influence>
+<id ><![CDATA[15]]></id>
+<name ><![CDATA[Vern/Beskyttelse]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[16]]></id>
+<name ><![CDATA[Industrifiskeri]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Industrifisk (øyepål m.fl)]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Reker]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[19]]></id>
+<name ><![CDATA[Reketråling]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Sild]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[makrell]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[Skipstrafikk]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[Vindkraft]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[26]]></id>
+<name ><![CDATA[Olje og gass]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[Fiskeriregulering]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[28]]></id>
+<name ><![CDATA[Nasjonaløkonomi]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[29]]></id>
+<name ><![CDATA[Temperatur]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[32]]></id>
+<name ><![CDATA[Næringssalter]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C.Fin]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[C. Hel]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[35]]></id>
+<name ><![CDATA[Phytoplankton]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Lysing]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Pelagisk fiskeri]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Sjøpattedyr]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Sjøfugl]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[40]]></id>
+<name ><![CDATA[Forurensing (landbasert)]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+</concepts>
+</scenario>
+<scenario >
+<name ><![CDATA[Redusert alt fiskeri]]></name>
+<concepts >
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Sei]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[-1]]></influence>
+<id ><![CDATA[2]]></id>
+<name ><![CDATA[Stormasket trålfiskeri]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[3]]></id>
+<name ><![CDATA[BILOGI]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[4]]></id>
+<name ><![CDATA[MENNESKELIG AKTIVITET]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[5]]></id>
+<name ><![CDATA[FORVALTNINGSMÅL]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[6]]></id>
+<name ><![CDATA[FYSIKK]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Opprettholde økosystemts struktur og funksjon]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[10]]></id>
+<name ><![CDATA[Størst mulig økonomisk fornybart langtidsutbytte]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[11]]></id>
+<name ><![CDATA[Ta vare på  sårbare arter og naturtyper]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Koraller, svamp, sjøfjær]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[TILTAK]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[15]]></id>
+<name ><![CDATA[Vern/Beskyttelse]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[-1]]></influence>
+<id ><![CDATA[16]]></id>
+<name ><![CDATA[Industrifiskeri]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Industrifisk (øyepål m.fl)]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Reker]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[-1]]></influence>
+<id ><![CDATA[19]]></id>
+<name ><![CDATA[Reketråling]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Sild]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[makrell]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[Skipstrafikk]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[Vindkraft]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[26]]></id>
+<name ><![CDATA[Olje og gass]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[Fiskeriregulering]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[28]]></id>
+<name ><![CDATA[Nasjonaløkonomi]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[29]]></id>
+<name ><![CDATA[Temperatur]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[32]]></id>
+<name ><![CDATA[Næringssalter]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C.Fin]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[C. Hel]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[35]]></id>
+<name ><![CDATA[Phytoplankton]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Lysing]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[-1]]></influence>
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Pelagisk fiskeri]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Sjøpattedyr]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Sjøfugl]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[40]]></id>
+<name ><![CDATA[Forurensing (landbasert)]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+</concepts>
+</scenario>
+<scenario >
+<name ><![CDATA[Økt vindkraft]]></name>
+<concepts >
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[1]]></id>
+<name ><![CDATA[Sei]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[2]]></id>
+<name ><![CDATA[Stormasket trålfiskeri]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[3]]></id>
+<name ><![CDATA[BILOGI]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[4]]></id>
+<name ><![CDATA[MENNESKELIG AKTIVITET]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[5]]></id>
+<name ><![CDATA[FORVALTNINGSMÅL]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[6]]></id>
+<name ><![CDATA[FYSIKK]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[9]]></id>
+<name ><![CDATA[Opprettholde økosystemts struktur og funksjon]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[10]]></id>
+<name ><![CDATA[Størst mulig økonomisk fornybart langtidsutbytte]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[11]]></id>
+<name ><![CDATA[Ta vare på  sårbare arter og naturtyper]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[13]]></id>
+<name ><![CDATA[Koraller, svamp, sjøfjær]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[14]]></id>
+<name ><![CDATA[TILTAK]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[15]]></id>
+<name ><![CDATA[Vern/Beskyttelse]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[16]]></id>
+<name ><![CDATA[Industrifiskeri]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[17]]></id>
+<name ><![CDATA[Industrifisk (øyepål m.fl)]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[18]]></id>
+<name ><![CDATA[Reker]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[19]]></id>
+<name ><![CDATA[Reketråling]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[21]]></id>
+<name ><![CDATA[Sild]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[22]]></id>
+<name ><![CDATA[makrell]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[24]]></id>
+<name ><![CDATA[Skipstrafikk]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[1]]></influence>
+<id ><![CDATA[25]]></id>
+<name ><![CDATA[Vindkraft]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[26]]></id>
+<name ><![CDATA[Olje og gass]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[27]]></id>
+<name ><![CDATA[Fiskeriregulering]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[28]]></id>
+<name ><![CDATA[Nasjonaløkonomi]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[29]]></id>
+<name ><![CDATA[Temperatur]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[32]]></id>
+<name ><![CDATA[Næringssalter]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[33]]></id>
+<name ><![CDATA[C.Fin]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[34]]></id>
+<name ><![CDATA[C. Hel]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[35]]></id>
+<name ><![CDATA[Phytoplankton]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[36]]></id>
+<name ><![CDATA[Lysing]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[37]]></id>
+<name ><![CDATA[Pelagisk fiskeri]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[38]]></id>
+<name ><![CDATA[Sjøpattedyr]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[39]]></id>
+<name ><![CDATA[Sjøfugl]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+<concept >
+<selected ><![CDATA[true]]></selected>
+<influence ><![CDATA[0]]></influence>
+<id ><![CDATA[40]]></id>
+<name ><![CDATA[Forurensing (landbasert)]]></name>
+<preferredState ><![CDATA[0]]></preferredState>
+</concept>
+</concepts>
+</scenario>
+</scenarios>
+</mentalmodeler>

@@ -1,0 +1,666 @@
+---
+title: "Mental Models QPRESS"
+author: "Erik Olsen"
+date: "2/10/2020"
+output: html_document
+---
+
+# Analysis of future scenarios for North Sea regional mental models
+Scenarios were explored using press perturbation (QPRESS) for four mental models of the North Sea:
+* Southern North Sea (Dutch stakeholders, 2018)
+* Skagerrak (WGINOSE scientists, 2018)
+* Kattegat (WKKEMSSP, 2019)
+* Norwegian Trenc (Norwegian stakeholders, 2019)
+
+## Libraries & functions
+```{r libraries and functions, echo=FALSE, warning=FALSE}
+require(data.table)
+library("tcltk")
+library("tcltk2")
+library("XML")
+library("Rcpp")
+library("tidyverse")
+
+devtools::install_github("SWotherspoon/QPress", build_vignettes = TRUE)
+require(QPress)
+
+
+#MM2Qpress
+#Function for converting Mental modeller spreadsheets into Qpress links
+#by Sean Lucey
+MM2Qpress <- function(data){
+  library(data.table)
+  mental.sheet <- as.data.table(data)
+  names(mental.sheet)[1] <- 'Box'
+  n <- nrow(mental.sheet)
+  box.names <- names(mental.sheet)[which(names(mental.sheet) != 'Box')]
+  model <- c()
+  for(i in 1:n){
+    pos <- which(mental.sheet[i, .SD, .SDcol = box.names] > 0)
+    if(length(pos) > 0){
+      pos.interaction <- paste(mental.sheet[i, Box], '->', 
+                               names(mental.sheet[i, pos + 1, with = F]), 
+                               sep = '')
+      model <- append(model, pos.interaction)
+    }
+    
+    neg <- which(mental.sheet[i, .SD, .SDcol = box.names] < 0)
+    if(length(neg) > 0){
+      neg.interaction <- paste(mental.sheet[i, Box], '-*', 
+                               names(mental.sheet[i, neg + 1, with = F]), 
+                               sep = '')
+      model <- append(model, neg.interaction)
+    }
+  }
+  return(model)
+}
+
+```
+
+## Import MM & create signed digraphs
+When reading in files from excel format R may read spaces differently in rows and columms.  
+To be safe:
+1. either use node names with no blanks OR  
+2. convert the names in the csv file to replace " " with "_"  
+  
+The below file has used option 2 to rename nodes
+and copied to ensure rows and columns have the same names
+
+```{r import MM, echo=FALSE, warning=FALSE}
+#southern North Sea
+SNS_dutch <- read.csv2("./data/2018_Dutch_Stakeholders/SouthNS_dutch.csv", dec=".")
+SNS<-MM2Qpress(SNS_dutch)
+SNS<-dput(SNS)
+SNSModel<-parse.digraph(SNS)
+
+#skagerrak
+skagerrak<- read.csv2("./data/2018_WGINOSE/Skagerrak_190418.csv", dec=".")
+sk<-MM2Qpress(skagerrak)
+sk<-dput(sk)
+skagerrakModel<-parse.digraph(sk)
+
+#kattegat
+kattegat<- read.csv2("./data/2019_Kattegat/Kattegat_WKKEMSSP_2019_final.csv", dec=".")
+kattegat2<-MM2Qpress(kattegat)
+kattegat2<-dput(kattegat2)
+kattegatModel<-parse.digraph(kattegat2)
+
+#Norwegian trench
+#NorwTrench<- read.csv2("./data/2019_NorwTrench/NorwTrench_eng.csv", dec=".")
+NorwTrench <- read_excel("./data/2019_NorwTrench/NorwTrench_eng_oct20.xlsx")
+NorwTrench2<-MM2Qpress(NorwTrench)
+NorwTrench2<-dput(NorwTrench2)
+NorwTrenchModel<-parse.digraph(NorwTrench2)
+```
+
+
+
+
+
+## QPRESS analysis
+#### Southern North Sea QPRESS model
+```{r SNS QPRESS, echo=FALSE, warning=FALSE}
+#doesnt work without this, self loops imposed
+SNSel<-enforce.limitation(SNSModel)
+
+#run the simulation
+SNSsim<-system.simulate(10, SNSel)
+
+#make the interactive plot
+#impact.barplot(SNSsim)
+
+#shiny interactive plot 
+impact.barplot.shiny(SNSsim)
+
+```
+
+#### Skagerrak QPRESS model
+```{r Skagerrak QPRESS, echo=FALSE, warning=FALSE}
+skag_el<-enforce.limitation(skagerrakModel)
+
+#run the simulation
+skag_sim<-system.simulate(10, skag_el)
+
+#make the interactive plot
+impact.barplot.shiny(skag_sim)
+
+
+```
+
+#### Kattegat QPRESS model
+```{r kattegat QPRESS, echo=FALSE, warning=FALSE}
+katt_el<-enforce.limitation(kattegatModel)
+
+#run the simulation
+katt_sim<-system.simulate(10, katt_el)
+
+#make the interactive plot
+impact.barplot.shiny(katt_sim)
+
+
+```
+
+
+#### Norwegian trench QPRESS model
+```{r Norw trench QPRESS, echo=FALSE, warning=FALSE}
+Nor_el<-enforce.limitation(NorwTrenchModel)
+
+#run the simulation
+Nor_sim<-system.simulate(10, Nor_el)
+
+#make the interactive plot
+impact.barplot.shiny(Nor_sim)
+
+```
+
+### QPRESS scenarios results as .CSV files
+Code borrowed from https://github.com/NOAA-EDAB/QNM/blob/master/looping_qpress_Rpath.R  
+
+#### Southern North Sea 
+```{r SNS QPRESS scenarios to CSV & barplot, echo=FALSE, warning=FALSE}
+
+#mmod <- NorwTrenchModel
+mmod <- SNSel
+
+scenarios <- c("fisheries_increase", "fisheries_decrease")
+qls <- c(1,-1)
+
+A <- adjacency.matrix(mmod)
+#A
+
+## Function to generate the community matrix
+s <- community.sampler(mmod)
+
+for (j in 1:length(scenarios)){ 
+  ## Function to check the validation condition
+   # press <- press.validate(mmod, perturb=c(Fisheries=1), monitor=F)
+  press <- press.validate(mmod, perturb=c(Fisheries=qls[j]), monitor=F)
+  
+  ## Function to define the perturbation scenario
+  #impact <- press.impact(mmod,perturb=c(Fisheries=1))
+  impact <- press.impact(mmod,perturb=c(Fisheries=qls[j]))
+  
+  ## Use 100 simulations
+  n.sims <- 100
+  results <- 0
+  i <- 0
+  while(i < n.sims) {
+    
+    ## Randomly choose edges to retain
+    z <- s$select(runif(1))
+    ## Sample community matrix
+    W <- s$community()
+    
+    ## Check press condition and stability
+    if(!(press(W) && stable.community(W))) next
+    
+    ## Monitor impact post press
+    imp <- impact(W)
+    imp[abs(imp)<1e-07]=0 #added to remove small perturbations
+    results <- results + outer(sign(imp),-1:1,'==')
+    i <- i+1
+    
+    rownames(results) <- levels(mmod$From)
+    colnames(results) <- c('-','0','+')
+    
+    #write.csv(results, "./QPRESS_2020/SNS/SNS_fisheries_increase.csv")
+  }
+  
+  
+  #write simulations to .csv file
+  write.csv(results, paste0("./output/QPRESS_2020/SNS_", scenarios[j],".csv"))
+  
+  
+  #bar plot
+    library(RColorBrewer)
+    pal <- brewer.pal(n=5,"Greys")[5:1]
+    
+    prop <- results/rowSums(results)
+    r <- colSums(t(prop)*(-1:1)) #this is the number we need to extract to the analysis
+    #filename <-  ("./QPRESS_2020/SNS_fisheries_increase.pdf")
+    filename <-  paste0("./output/QPRESS_2020/SNS/SNS_", scenarios[j],".pdf")
+    pdf(filename)
+    #adjust barplot if you want it ordered by proportion
+    par(mar=c(5,10,1,1)+0.1)
+   # barplot(t(prop),
+    #        horiz=T,cex.names=0.7,cex.axis=0.8,las=2,border=T, col=pal,xlab="Proportion")
+    
+    opar <- par(mar=c(5,10,1,1)+0.1)
+    barplot(t(prop[order(r),]),
+          horiz=T,cex.names=0.6,cex.axis=0.8,las=2,border=T,col=pal,xlab="Proportion")
+   dev.off()
+    #par(opar)
+
+}
+
+```
+##### SNS single output tables 
+```{r SNS single output table}
+
+tfiles <- list.files("./output/QPRESS_2020/SNS/", pattern=".csv")
+i <- 1
+results <- read_csv(paste0("./output/QPRESS_2020/SNS/", tfiles[i]))[,1]
+
+
+for (i in 1:length(tfiles)){ 
+tdf <- read_csv(paste0("./output/QPRESS_2020/SNS/", tfiles[i]))
+
+  colnames(tdf) <- c("Variable", paste0(substr(tfiles[i], 5, 22), "_Down"), paste0(substr(tfiles[i], 5, 22), "_0"), paste0(substr(tfiles[i], 5, 22), "_Up") )
+  results <- as.data.table(cbind(results, tdf[2:4]))
+}
+
+results$Fisheries_decrease <- results$fisheries_decrease_Up-results$fisheries_decrease_Down
+results$Fisheries_increase <- results$fisheries_increase_Up-results$fisheries_increase_Down
+
+write_csv(results, "./output/QPRESS_2020/SNS/SNS_QPRESS_All_scenarios.csv")
+```
+
+
+
+#### Skagerrak
+only changed demersal fisheries to match the EwE scenarios. 
+```{r Skagerrak QPRESS scenarios to CSV & barplot, echo=FALSE, warning=FALSE}
+
+mmod <- skag_el
+
+scenarios_f <- c("fisheries_incr", "fisheries_decr" )
+scenarios_m <- c("marmam_incr", "marmam_decr")
+qls <- c(1,-1)
+
+A <- adjacency.matrix(mmod)
+
+## Function to generate the community matrix
+s <- community.sampler(mmod)
+
+#Fisheries Scenarios
+for (j in 1:length(scenarios_f)){ 
+  ## Function to check the validation condition
+  press <- press.validate(mmod, perturb=c(Fisheries_D=qls[j]), monitor=F)
+  
+  #press <- press.validate(mmod, perturb=c(Fisheries_D=qls[j], Fisheries_P=qls[j], Fisheries_Rec=qls[j]), monitor=F)
+  #press <- press.validate(mmod, perturb=c(Fisheries_D=qls[j],  monitor=F)
+  
+  ## Function to define the perturbation scenario
+  impact <- press.impact(mmod,perturb=c(Fisheries_D=qls[j]))
+ # impact <- press.impact(mmod,perturb=c(Fisheries_D=qls[j], Fisheries_P=qls[j], Fisheries_Rec=qls[j]))
+  
+  #impact <- press.impact(mmod,perturb=c(Fisheries_D=qls[j]))
+  
+  ## Use 100 simulations
+  n.sims <- 100
+  results <- 0
+  i <- 0
+  while(i < n.sims) {
+    
+    ## Randomly choose edges to retain
+    z <- s$select(runif(1))
+    ## Sample community matrix
+    W <- s$community()
+    
+    ## Check press condition and stability
+    if(!(press(W) && stable.community(W))) next
+    
+    ## Monitor impact post press
+    imp <- impact(W)
+    imp[abs(imp)<1e-07]=0 #added to remove small perturbations
+    results <- results + outer(sign(imp),-1:1,'==')
+    i <- i+1
+    
+    rownames(results) <- levels(mmod$From)
+    colnames(results) <- c('-','0','+')
+    
+  }
+  
+  #write simulations to .csv file
+  write.csv(results, paste0("./output/QPRESS_2020/Skagerrak/Skagerrak_", scenarios_f[j],".csv"))
+  
+  #bar plot
+    library(RColorBrewer)
+    pal <- brewer.pal(n=5,"Greys")[5:1]
+    
+    prop <- results/rowSums(results)
+    r <- colSums(t(prop)*(-1:1)) #this is the number we need to extract to the analysis
+    filename <-  paste0("./output/QPRESS_2020/Skagerrak/Skagerrak_", scenarios_f[j],".pdf")
+    pdf(filename)
+    
+    #adjust barplot if you want it ordered by proportion
+    par(mar=c(5,10,1,1)+0.1)
+    opar <- par(mar=c(5,10,1,1)+0.1)
+    barplot(t(prop[order(r),]),
+          horiz=T,cex.names=0.6,cex.axis=0.8,las=2,border=F,col=pal,xlab="Proportion")
+   dev.off()
+    #par(opar)
+
+}
+
+
+#marine mammal scenarios
+for (j in 1:length(scenarios_m)){ 
+  ## Function to check the validation condition
+  press <- press.validate(mmod, perturb=c(Mammals=qls[j]), monitor=F)
+  
+  ## Function to define the perturbation scenario
+  impact <- press.impact(mmod,perturb=c(Mammals=qls[j]))
+  
+  ## Use 100 simulations
+  n.sims <- 100
+  results <- 0
+  i <- 0
+  while(i < n.sims) {
+    
+    ## Randomly choose edges to retain
+    z <- s$select(runif(1))
+    ## Sample community matrix
+    W <- s$community()
+    
+    ## Check press condition and stability
+    if(!(press(W) && stable.community(W))) next
+    
+    ## Monitor impact post press
+    imp <- impact(W)
+    imp[abs(imp)<1e-07]=0 #added to remove small perturbations
+    results <- results + outer(sign(imp),-1:1,'==')
+    i <- i+1
+    
+    rownames(results) <- levels(mmod$From)
+    colnames(results) <- c('-','0','+')
+    
+  }
+  
+  #write simulations to .csv file
+  write.csv(results, paste0("./output/QPRESS_2020/Skagerrak/Skagerrak_", scenarios_m[j],".csv"))
+  
+  #bar plot
+    library(RColorBrewer)
+    pal <- brewer.pal(n=5,"Greys")[5:1]
+    
+    prop <- results/rowSums(results)
+    r <- colSums(t(prop)*(-1:1)) #this is the number we need to extract to the analysis
+    filename <-  paste0("./output/QPRESS_2020/Skagerrak/Skagerrak_", scenarios_m[j],".pdf")
+    pdf(filename)
+    
+    #adjust barplot if you want it ordered by proportion
+    par(mar=c(5,10,1,1)+0.1)
+    opar <- par(mar=c(5,10,1,1)+0.1)
+    barplot(t(prop[order(r),]),
+          horiz=T,cex.names=0.6,cex.axis=0.8,las=2,border=F,col=pal,xlab="Proportion")
+   dev.off()
+    #par(opar)
+
+}
+```
+
+##### Skagerrak single output tables
+```{r Skagerrak single output table}
+
+tfiles <- list.files("./output/QPRESS_2020/Skagerrak/", pattern=".csv")
+i <- 1
+results <- read_csv(paste0("./output/QPRESS_2020/Skagerrak/", tfiles[i]))[,1]
+
+
+for (i in 1:length(tfiles)){ 
+tdf <- read_csv(paste0("./output/QPRESS_2020/Skagerrak/", tfiles[i]))
+
+  colnames(tdf) <- c("Variable", paste0(substr(tfiles[i], 11, 24), "_Down"), paste0(substr(tfiles[i], 11, 24), "_0"), paste0(substr(tfiles[i], 11, 24), "_Up") )
+  results <- as.data.table(cbind(results, tdf[2:4]))
+}
+
+results$Fisheries_decrease <- results$fisheries_decr_Up-results$fisheries_decr_Down
+results$Fisheries_increase <- results$fisheries_incr_Up-results$fisheries_incr_Down
+results$marmam_decr <- results$marmam_decr.cs_Up-results$marmam_decr.cs_Down
+results$marmam_incre <- results$marmam_incr.cs_Up-results$marmam_incr.cs_Down
+
+write_csv(results, "./output/QPRESS_2020/Skagerrak/Skagerrak_QPRESS_All_scenarios.csv")
+```
+
+
+#### Kattegat
+including only demersal fisheries
+```{r Kattegat QPRESS scenarios to CSV & barplot, echo=FALSE, warning=FALSE}
+
+mmod <- katt_el
+
+scenarios_f <- c("fisheries_incr", "fisheries_decr" )
+scenarios_m <- c("marmam_incr", "marmam_decr")
+qls <- c(1,-1)
+
+A <- adjacency.matrix(mmod)
+
+## Function to generate the community matrix
+s <- community.sampler(mmod)
+
+#Fisheries Scenarios
+for (j in 1:length(scenarios_f)){ 
+  ## Function to check the validation condition
+  press <- press.validate(mmod, perturb=c(Fisheries_Dem=qls[j]), monitor=F)
+  #   press <- press.validate(mmod, perturb=c(Fisheries_Dem=qls[j], Fisheries_Pel=qls[j], Fisheries_Rec=qls[j]), monitor=F)
+  
+  ## Function to define the perturbation scenario
+  impact <- press.impact(mmod,perturb=c(Fisheries_Dem=qls[j]))
+  # impact <- press.impact(mmod,perturb=c(Fisheries_Dem=qls[j], Fisheries_Pel=qls[j], Fisheries_Rec=qls[j]))
+  
+  ## Use 100 simulations
+  n.sims <- 100
+  results <- 0
+  i <- 0
+  while(i < n.sims) {
+    
+    ## Randomly choose edges to retain
+    z <- s$select(runif(1))
+    ## Sample community matrix
+    W <- s$community()
+    
+    ## Check press condition and stability
+    if(!(press(W) && stable.community(W))) next
+    
+    ## Monitor impact post press
+    imp <- impact(W)
+    imp[abs(imp)<1e-07]=0 #added to remove small perturbations
+    results <- results + outer(sign(imp),-1:1,'==')
+    i <- i+1
+    
+    rownames(results) <- levels(mmod$From)
+    colnames(results) <- c('-','0','+')
+    
+  }
+  
+  #write simulations to .csv file
+  write.csv(results, paste0("./output/QPRESS_2020/Kattegat/Kattegat_", scenarios_f[j],".csv"))
+  
+  #bar plot
+    library(RColorBrewer)
+    pal <- brewer.pal(n=5,"Greys")[5:1]
+    
+    prop <- results/rowSums(results)
+    r <- colSums(t(prop)*(-1:1)) #this is the number we need to extract to the analysis
+    filename <-  paste0("./output/QPRESS_2020/Kattegat/Kattegat_", scenarios_f[j],".pdf")
+    pdf(filename)
+    
+    #adjust barplot if you want it ordered by proportion
+    par(mar=c(5,10,1,1)+0.1)
+    opar <- par(mar=c(5,10,1,1)+0.1)
+    barplot(t(prop[order(r),]),
+          horiz=T,cex.names=0.5,cex.axis=0.8,las=2,border=F,col=pal,xlab="Proportion")
+   dev.off()
+    #par(opar)
+
+}
+
+
+#marine mammal scenarios
+for (j in 1:length(scenarios_m)){ 
+  ## Function to check the validation condition
+  press <- press.validate(mmod, perturb=c(Seals=qls[j]), monitor=F)
+  
+  ## Function to define the perturbation scenario
+  impact <- press.impact(mmod,perturb=c(Seals=qls[j]))
+  
+  ## Use 100 simulations
+  n.sims <- 100
+  results <- 0
+  i <- 0
+  while(i < n.sims) {
+    
+    ## Randomly choose edges to retain
+    z <- s$select(runif(1))
+    ## Sample community matrix
+    W <- s$community()
+    
+    ## Check press condition and stability
+    if(!(press(W) && stable.community(W))) next
+    
+    ## Monitor impact post press
+    imp <- impact(W)
+    imp[abs(imp)<1e-07]=0 #added to remove small perturbations
+    results <- results + outer(sign(imp),-1:1,'==')
+    i <- i+1
+    
+    rownames(results) <- levels(mmod$From)
+    colnames(results) <- c('-','0','+')
+    
+  }
+  
+  #write simulations to .csv file
+  write.csv(results, paste0("./output/QPRESS_2020/Kattegat/Kattegat_", scenarios_m[j],".csv"))
+  
+  #bar plot
+    library(RColorBrewer)
+    pal <- brewer.pal(n=5,"Greys")[5:1]
+    
+    prop <- results/rowSums(results)
+    r <- colSums(t(prop)*(-1:1)) #this is the number we need to extract to the analysis
+    filename <-  paste0("./output/QPRESS_2020/Kattegat/Kattegat_", scenarios_m[j],".pdf")
+    pdf(filename)
+    
+    #adjust barplot if you want it ordered by proportion
+    par(mar=c(5,10,1,1)+0.1)
+    opar <- par(mar=c(5,10,1,1)+0.1)
+    barplot(t(prop[order(r),]),
+          horiz=T,cex.names=0.5,cex.axis=0.8,las=2,border=F,col=pal,xlab="Proportion")
+   dev.off()
+    #par(opar)
+
+}
+```
+
+
+##### Kattegat single output tables
+```{r Kattegat single output table}
+
+tfiles <- list.files("./output/QPRESS_2020/Kattegat/", pattern=".csv")
+i <- 1
+results <- read_csv(paste0("./output/QPRESS_2020/Kattegat/", tfiles[i]))[,1]
+
+
+for (i in 1:length(tfiles)){ 
+tdf <- read_csv(paste0("./output/QPRESS_2020/Kattegat/", tfiles[i]))
+
+  colnames(tdf) <- c("Variable", paste0(substr(tfiles[i], 10, 23), "_Down"), paste0(substr(tfiles[i], 10, 23), "_0"), paste0(substr(tfiles[i], 10, 23), "_Up") )
+  results <- as.data.table(cbind(results, tdf[2:4]))
+}
+
+results$Fisheries_decrease <- results$fisheries_decr_Up-results$fisheries_decr_Down
+results$Fisheries_increase <- results$fisheries_incr_Up-results$fisheries_incr_Down
+results$marmam_decr <- results$marmam_decr.cs_Up-results$marmam_decr.cs_Down
+results$marmam_incre <- results$marmam_incr.cs_Up-results$marmam_incr.cs_Down
+
+write_csv(results, "./output/QPRESS_2020/Kattegat/Kattegat_QPRESS_All_scenarios.csv")
+```
+
+#### Norwegian Trench
+Demersal fisheries only
+```{r  NorwTrench QPRESS scenarios to CSV & barplot, echo=FALSE, warning=FALSE}
+
+mmod <- Nor_el
+
+scenarios_f <- c("fisheries_incr", "fisheries_decr" )
+
+qls <- c(1,-1)
+
+A <- adjacency.matrix(mmod)
+
+## Function to generate the community matrix
+s <- community.sampler(mmod)
+
+#Fisheries Scenarios
+for (j in 1:length(scenarios_f)){ 
+  ## Function to check the validation condition
+  press <- press.validate(mmod, perturb=c(Fisheries_ind=qls[j], L_mesh_trawling=qls[j], Fisheries_shrimp=qls[j]), monitor=F) 
+  # press <- press.validate(mmod, perturb=c(Fisheries_ind=qls[j], L_mesh_trawling=qls[j], Fisheries_pel=qls[j],  Fisheries_shrimp=qls[j]), monitor=F)
+  
+  ## Function to define the perturbation scenario
+  impact <- press.impact(mmod,perturb=c(Fisheries_ind=qls[j], L_mesh_trawling=qls[j], Fisheries_shrimp=qls[j]))
+  # impact <- press.impact(mmod,perturb=c(Fisheries_ind=qls[j], L_mesh_trawling=qls[j], Fisheries_pel=qls[j],  Fisheries_shrimp=qls[j]))
+  
+  ## Use 100 simulations
+  n.sims <- 100
+  results <- 0
+  i <- 0
+  while(i < n.sims) {
+    
+    ## Randomly choose edges to retain
+    z <- s$select(runif(1))
+    ## Sample community matrix
+    W <- s$community()
+    
+    ## Check press condition and stability
+    if(!(press(W) && stable.community(W))) next
+    
+    ## Monitor impact post press
+    imp <- impact(W)
+    imp[abs(imp)<1e-07]=0 #added to remove small perturbations
+    results <- results + outer(sign(imp),-1:1,'==')
+    i <- i+1
+    
+    rownames(results) <- levels(mmod$From)
+    colnames(results) <- c('-','0','+')
+    
+  }
+  
+  #write simulations to .csv file
+  write.csv(results, paste0("./output/QPRESS_2020/NorwTrench/NorwTrench_", scenarios_f[j],".csv"))
+  
+  #bar plot
+    library(RColorBrewer)
+    pal <- brewer.pal(n=5,"Greys")[5:1]
+    
+    prop <- results/rowSums(results)
+    r <- colSums(t(prop)*(-1:1)) #this is the number we need to extract to the analysis
+    filename <-  paste0("./output/QPRESS_2020/NorwTrench/NorwTrench_", scenarios_f[j],".pdf")
+    pdf(filename)
+    
+    #adjust barplot if you want it ordered by proportion
+    par(mar=c(5,10,1,1)+0.1)
+    opar <- par(mar=c(5,10,1,1)+0.1)
+    barplot(t(prop[order(r),]),
+          horiz=T,cex.names=0.6,cex.axis=0.8,las=2,border=F,col=pal,xlab="Proportion")
+   dev.off()
+    #par(opar)
+
+}
+
+```
+
+##### Norw Trench single output table
+```{r NorwTrench single output table}
+
+tfiles <- list.files("./output/QPRESS_2020/NorwTrench/", pattern=".csv")
+i <- 1
+results <- read_csv(paste0("./output/QPRESS_2020/NorwTrench/", tfiles[i]))[,1]
+
+
+for (i in 1:length(tfiles)){ 
+tdf <- read_csv(paste0("./output/QPRESS_2020/NorwTrench/", tfiles[i]))
+
+  colnames(tdf) <- c("Variable", paste0(substr(tfiles[i], 12, 25), "_Down"), paste0(substr(tfiles[i], 12, 25), "_0"), paste0(substr(tfiles[i], 12, 25), "_Up") )
+  results <- as.data.table(cbind(results, tdf[2:4]))
+}
+
+results$Fisheries_decrease <- results$fisheries_decr_Up-results$fisheries_decr_Down
+results$Fisheries_increase <- results$fisheries_incr_Up-results$fisheries_incr_Down
+
+write_csv(results, "./output/QPRESS_2020/NorwTrench/NorwTrench_QPRESS_All_scenarios.csv")
+```
+
+
+

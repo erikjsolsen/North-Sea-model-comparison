@@ -1,0 +1,831 @@
+---
+title: "QPRESS EwE comparison"
+author: "Erik Olsen"
+date: "10/13/2020"
+output: html_document
+---
+## Description
+This script compares the output from the scenarios run on the Kattegat and NS EwE models with the scenarios run using QPRESS for the mental models of the Southern North Sea, Kattegat, Skagerrak and Norwegian Trench.   
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Libraries
+```{r libraries echo=FALSE, warning=FALSE}
+library("tidyverse")
+library("readxl")
+library(grid) 
+library(gridExtra)
+library(patchwork)
+library(devtools) 
+#install_github("vqv/ggbiplot", force = TRUE)
+library(ggbiplot)
+
+library(flextable)
+library(scales)
+library(webshot)
+webshot::install_phantomjs()
+library(ggstatsplot)
+```
+
+## Load data files
+```{r  load files echo=FALSE, warning=FALSE}
+Katt_EwE_bio <- read_csv("./figs/biomass Kattegat.csv")
+Katt_EwE_catch <- read_csv("./catches Kattegat.csv")
+NS_EwE_bio <- read_csv("./figs/biomass NS.csv")
+NS_EwE_catch <- read_csv("./figs/catch NS.csv")
+SNS_QP <- read_csv("./output/QPRESS_2020/SNS/SNS_QPRESS_All_scenarios.csv")
+Katt_QP <- read_csv("./output/QPRESS_2020/Kattegat/Kattegat_QPRESS_All_scenarios.csv")
+Skag_QP <- read_csv("./output/QPRESS_2020/Skagerrak/Skagerrak_QPRESS_All_scenarios.csv")
+Nor_QP <- read_csv("./output/QPRESS_2020/NorwTrench/NorwTrench_QPRESS_All_scenarios.csv")
+```
+## Create joint data sets for the Southern North Sea, Skagerrak, Norwegian Trench and Kattegat
+First need to make comparable groups of the model variables. 
+
+### Southern North Sea combined data set
+Combine SNS_QP, NS_EwE_bio and NS_EwE_catch  
+  
+SNS_QP model only has "benthic_hab", "biol_spec" and "fisheries" that match variables in the NS_EwE model, so all catches in the NS_EwE model are mapped to "fisheries" and the biological components are split and mapped to "benthic_hab" and "biol_spec" components.  
+  
+  
+"benthic_hab" consisist of the EwE components: 
+* "Small.infauna..polychaetes."  
+* "Sessile.epifauna" 
+* "Meiofauna"   
+* "Benthic.microflora..incl.Bacteria.protozoa.."
+* "Detritus...POM...sediment"   
+  
+All other EwE biological component are mapped to "biol_spec"  
+  
+When combining groups a simple average in the normalized responses are calculated, which may be incorrect as small and large groups are given equal weight. 
+
+
+```{r SNS combined, echo=FALSE, warning=FALSE}
+# get list of variable names
+NS_EwE_bio$scenario
+NS_EwE_catch$scenario
+SNS_QP$X1
+
+#######
+#benthos / benthic habitat group
+EWEbenthos <-NS_EwE_bio %>% filter(scenario%in%c("Small.infauna..polychaetes.",  "Sessile.epifauna", "Meiofauna", "Benthic.microflora..incl.Bacteria.protozoa..", "Detritus...POM...sediment")) %>% summarise_each(funs(mean))
+
+QP_benthos <- SNS_QP %>% filter(X1=="Benthic_Hab") 
+
+tqp <- as.data.frame(t(QP_benthos[,8:9]))
+tqp[,2] <- c("MM")
+tqp$V1<-tqp$V1/100+1
+tewe <- as.data.frame(t(EWEbenthos[,3:6]))
+tewe[,2]<-c("EwE")
+
+SNSbenthos <- rbind(tqp, tewe)
+SNSbenthos$scenario <- rownames(SNSbenthos)
+colnames(SNSbenthos) <- c("Response", "model", "Scenario")
+
+SNSbenthos$Scenario <- factor(SNSbenthos$Scenario,levels = c("No fishing","-50%  fishing","+25%  fishing","+75%  fishing", "Fisheries_decrease", "Fisheries_increase"))
+
+
+#######
+#other biological groups
+EWEbio <-   NS_EwE_bio %>% filter(!scenario%in%c("Small.infauna..polychaetes.",  "Sessile.epifauna", "Meiofauna", "Benthic.microflora..incl.Bacteria.protozoa..", "Detritus...POM...sediment")) %>% summarise_each(funs(mean))
+
+QPbio <- SNS_QP %>% filter(X1=="Biol_Spec") 
+
+tqp2 <- as.data.frame(t(QPbio[,8:9]))
+tqp2[,2] <- c("MM")
+tqp2$V1<-tqp2$V1/100+1
+tewe2 <- as.data.frame(t(EWEbio[,3:6]))
+tewe2[,2]<-c("EwE")
+
+SNSbio <- rbind(tqp2, tewe2)
+SNSbio$scenario <- rownames(SNSbio)
+colnames(SNSbio) <- c("Response", "model", "Scenario")
+
+SNSbio$Scenario <- factor(SNSbio$Scenario,levels = c("No fishing","-50%  fishing","+25%  fishing","+75%  fishing", "Fisheries_decrease", "Fisheries_increase"))
+
+
+#####
+# catch data
+
+EWEcatch<-NS_EwE_catch %>% summarise_each(mean)
+
+QPfish <- SNS_QP %>% filter(X1=="Fisheries") 
+
+tqp3 <- as.data.frame(t(QPfish[,8:9]))
+tqp3[,2] <- c("MM")
+tqp3$V1<-tqp3$V1/100+1
+tewe3 <- as.data.frame(t(EWEcatch[,3:6]))
+tewe3[,2]<-c("EwE")
+
+SNScatch <- rbind(tqp3, tewe2)
+SNScatch$scenario <- rownames(SNScatch)
+colnames(SNScatch) <- c("Response", "model", "Scenario")
+
+SNScatch$Scenario <- factor(SNScatch$Scenario,levels = c("No fishing","-50%  fishing","+25%  fishing","+75%  fishing", "Fisheries_decrease", "Fisheries_increase"))
+
+
+```
+
+####Southern North Sea comparison plots
+```{r SNS comp plots, echo=FALSE, warning=FALSE}
+
+SNSbenthos$component <- c("benthos")
+SNSbio$component <- c("biological components")
+SNScatch$component <- c("catch")
+
+SNS_all <- rbind(SNSbenthos, SNSbio, SNScatch)
+
+SNS_all$Scenario <- factor(SNS_all$Scenario,levels = c("No fishing","-50%  fishing", "Fisheries_decrease", "+25%  fishing","+75%  fishing",  "Fisheries_increase"))
+
+#plot all 
+ggplot(SNS_all, aes(Scenario,Response-1, fill=model)) +geom_col(aes(y=Scenario, x=Response-1)) +theme_bw() + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + theme(axis.title.y = element_blank(), axis.title.x = element_blank()) + ggtitle("Southern North Sea") +facet_wrap(~component, scales="free_y", dir="v")
+
+ggsave("./figs/SNS_all.png", width=14, height=10, units="cm")
+
+# benthos plot
+#ggplot(SNSbenthos, aes(Scenario,Response-1, fill=model)) +geom_col() +theme_bw() + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + theme(axis.title.y = element_blank()) + ggtitle("Southern North Sea: Benthos/habitats")
+
+
+```
+
+#### SNS combined table
+
+```{r comp table Skagerrak, echo=FALSE, warning=FALSE}
+Nor_comb2 <- SNS_all
+Nor_comb2$Response <- Nor_comb2$Response-1
+Nor_wide <- Nor_comb2 %>% pivot_wider(names_from = c(Scenario, model), values_from=Response) #exclude mackerel (not in MM data)
+Nor_wide <- Nor_wide[,c(1,2,4,5, 3,6,7)]
+#colnames(Nor_wide) <- c("component", "Fisheries_decrease_MM", "No_fishing_EwE", "E-50% _fishing_EwE","Fisheries_increase_MM","E+25%_fishing_EwE", "E+75%_fishing_EwE")    
+
+scale <- scales::col_numeric(domain= c(-1.75, 1.75), palette ="PiYG")  
+ft_2 <- flextable(Nor_wide)
+  ft_2 <- bg(ft_2, j = colnames(Nor_wide)[2:7], bg = scale)
+  ft_2 <- set_formatter_type(ft_2)
+  ft_2  
+  
+ft_2 <- add_header_row(ft_2,  colwidths = c(1, 3, 3),  values = c(" ", "Decrease fisheries", "Increase fisheries"))
+
+ft_2 <- set_header_labels(ft_2, component = " ", 
+    Fisheries_decrease_MM = "MM: decrease", "No fishing_EwE" = "EwE: -100%",
+    "-50%  fishing_EwE" = "EwE: -50%", Fisheries_increase_MM = "MM: increase", "+25%  fishing_EwE" = "EwE: +25%", "+75%  fishing_EwE" = "EwE: +75%")
+
+ft_2
+
+
+#export as docx and png
+save_as_docx("SNS Mental model and EwE comparisons" = ft_2, path = "./figs/SNS_table.docx")
+save_as_image(ft_2, path = "./figs/SNS_table.png")
+```
+#### SNS Correlation plot
+```{r SNS Correlation, echo=FALSE}
+set.seed(123)
+
+ggcorrmat(
+  data = Nor_wide, # data from which variable is to be taken
+  cor.vars = 2:4, # specifying correlation matrix variables
+  #type="nonparametric"
+)
+
+ggsave("./QPRESS_2020/figs/SNS_F_decr_corr_plot.png")
+
+
+ggcorrmat(
+  data = Nor_wide, # data from which variable is to be taken
+  cor.vars = 5:7, # specifying correlation matrix variables
+  #type="nonparametric"
+)
+
+ggsave("./figs/SNS_F_incr_corr_plot.png")
+
+```
+
+
+
+### Kattegat combined data sets
+```{r Kattegat combined data, echo=FALSE, warning=FALSE}
+
+# get list of variable names
+#Katt_EwE_bio$scenario
+#Katt_EwE_catch$group_n
+#Katt_QP$X1
+
+colnames(Katt_QP)[1] <- c("component")
+colnames(Katt_EwE_bio)[2] <- c("component")
+colnames(Katt_EwE_catch)[2] <- c("component")
+
+# EWE Biol data
+#map EwE names to MM names
+kmapping <- read_excel("./Kattegat MM EwE mapping.xlsx")
+Katt_EwE_bio$component_m <- kmapping$Mmmapping[match(Katt_EwE_bio$component, kmapping$EwE)]
+
+Katt_QP$component_e <- c("Not_in_MM")
+Katt_QP$component_e <- kmapping$EwE[match(Katt_QP$component, kmapping$Mmmapping)]
+  
+
+#convert til long format
+Kbiol_long <- Katt_EwE_bio[,c(3:9)] %>% pivot_longer(!component_m, names_to = "scenario", values_to = "value", names_repair="unique")
+
+Kbiol_long$model <- c("EwE")
+colnames(Kbiol_long)[1] <- c("component")
+
+#sum same biol components
+Kbiol_long <- Kbiol_long %>% group_by(component, scenario) %>% dplyr::summarise(value=mean(value))
+Kbiol_long$model <- c("EwE")
+
+#EWE Catch data
+Kec <- Katt_EwE_catch[,c(2:8)] %>% summarise_all(funs(mean))
+Kec[,1] <- as.character(Kec[,1])
+Kec[1,1] <- c("Fisheries_catch")
+#to long format
+Kec <- Kec %>% pivot_longer(!component, names_to = "scenario", values_to = "value", names_repair="unique") 
+Kec$model <- c("EwE")
+
+
+
+## MM data
+#biol components
+Kqp_long <-  Katt_QP[!is.na(Katt_QP$component_e),][,c(1,14:17)] %>% pivot_longer(!component, names_to = "scenario", values_to = "value", names_repair="unique")
+Kqp_long$model <- c("MM")
+#catch all fisheries
+Kfish <- subset(Katt_QP,component == "Fisheries_Dem" | component == "Fisheries_Pel" |  component == "Fisheries_Rec")[,c(1,14:17)] %>% pivot_longer(!component, names_to = "scenario", values_to = "value", names_repair="unique") %>% group_by(scenario) %>% dplyr::summarise(value=mean(value))
+Kfish$component <- c("Fisheries_catch")
+Kfish <- Kfish[,c(3,1,2)]
+Kfish$model <- c("MM")
+
+
+#combine biol and catch
+Kqp_long <- rbind(Kqp_long, Kfish)
+
+#normalize all data
+Kqp_long$value <- Kqp_long$value/100+1
+Kqp_long$model <- c("MM")
+
+#Combine data
+Katt_comb <- rbind(Kqp_long, Kbiol_long, Kec)
+
+
+Katt_comb$scenario <- factor(Katt_comb$scenario,levels = c("No fishing","-50% demersal fishing","Fisheries_decrease", "+25% demersal fishing","+75% demersal fishing",   "Fisheries_increase", "seal biomass X 10","seal biomass X 2","marmam_decr", "marmam_incre"))
+
+
+
+```
+
+
+#### Kattegat comparison plots
+```{r Kattegat comparison plots, echo=FALSE, warning=FALSE}
+# all components
+ggplot(Katt_comb, aes(scenario,value-1, fill=model)) +geom_col(aes(y=scenario, x=value-1)) +theme_bw() + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + theme(axis.title.y = element_blank(), axis.title.x = element_blank()) + ggtitle("Kattegat") +facet_wrap(vars(component), scales="free_x")
+
+
+
+ggsave("./figs/Kattegat_bio_catch.png", height=18, width=14, units="cm")
+
+```
+
+#### Kattegat combined table
+
+```{r comp table Kattegat, echo=FALSE, warning=FALSE}
+Nor_comb2 <- Katt_comb
+Nor_comb2$value <- Nor_comb2$value-1
+Nor_wide <- Nor_comb2 %>% pivot_wider(names_from = c(scenario, model), values_from=value) #exclude mackerel (not in MM data)
+Nor_wide <- Nor_wide[,c(1,2,9,6, 3,7,8, 4, 5, 10,11)]
+#colnames(Nor_wide) <- c("component", "Fisheries_decrease_MM", "No_fishing_EwE", "E-50% _fishing_EwE","Fisheries_increase_MM","E+25%_fishing_EwE", "E+75%_fishing_EwE")    
+
+scale <- scales::col_numeric(domain= c(-0.8, 0.8), palette ="PiYG")  
+ft_2 <- flextable(Nor_wide)
+  ft_2 <- bg(ft_2, j = colnames(Nor_wide)[2:7], bg = scale)
+  ft_2 <- set_formatter_type(ft_2)
+  ft_2  
+  
+  scale2 <- scales::col_numeric(domain= c(-9.01, 9.01), palette ="PiYG")  
+  ft_2 <- bg(ft_2, j = colnames(Nor_wide)[8:11], bg = scale2)
+  ft_2
+  
+ft_2 <- add_header_row(ft_2,  colwidths = c(1, 3, 3, 4),  values = c(" ", "Decrease fisheries", "Increase fisheries", "Seals"))
+
+ft_2 <- set_header_labels(ft_2, component = " ", 
+    Fisheries_decrease_MM = "MM: decrease", "No fishing_EwE" = "EwE: -100%",
+    "-50% demersal fishing_EwE" = "EwE: -50%", Fisheries_increase_MM = "MM: increase", "+25% demersal fishing_EwE" = "EwE: +25%", "+75% demersal fishing_EwE" = "EwE: +75%", "marmam_decr_MM" ="MM: decrease", "marmam_incre_MM" = "MM: increase", "seal biomass X 10_EwE" = "EwE: seals  X 10", "seal biomass X 2_EwE" = "EwE: Seals X 2"  )
+
+ft_2
+
+
+#export as docx and png
+save_as_docx("Kattegat Mental model and EwE comparisons" = ft_2, path = "./figs/Kattegat_table.docx")
+save_as_image(ft_2, path = "./figs/Kattegat_table.png")
+```
+
+#### Kattegat correlation plot
+```{r kattegat Correlation, echo=FALSE}
+
+ggcorrmat(
+  data = Nor_wide, # data from which variable is to be taken
+  cor.vars = 2:4, # specifying correlation matrix variables
+  #type="nonparametric"
+)
+
+ggsave("./figs/kattegat_F_decr_corr_plot.png")
+
+ggcorrmat(
+  data = Nor_wide, # data from which variable is to be taken
+  cor.vars = 5:7, # specifying correlation matrix variables
+ # type="nonparametric"
+)
+
+ggsave("./figs/kattegat_F_incr_corr_plot.png")
+
+
+ggcorrmat(
+  data = Nor_wide, # data from which variable is to be taken
+  cor.vars = c(9,10,11), # specifying correlation matrix variables
+ # type="nonparametric"
+)
+
+ggsave("./figs/kattegat_seals_corr_plot.png")
+
+```
+
+
+
+### Skagerrak combined data sets
+```{r Skagerrak combined data, echo=FALSE, warning=FALSE}
+# get list of variable names
+
+
+NS_EwE_bio$scenario
+NS_EwE_catch$scenario
+Skag_QP$X1
+
+colnames(Skag_QP)[1] <- c("component")
+colnames(NS_EwE_bio)[2] <- c("component")
+colnames(NS_EwE_catch)[2] <- c("component")
+
+# EWE Biol data
+#map EwE names to MM names
+kmapping <- read_excel("./data/NS_EwE/NS_skagerrak_mapping.xlsx")
+NS_EwE_bio$component_m <- kmapping$Mmmapping[match(NS_EwE_bio$component, kmapping$EwE)]
+
+Skag_QP$component_e <- c("Not_in_MM")
+Skag_QP$component_e <- kmapping$EwE[match(Skag_QP$component, kmapping$Mmmapping)]
+  
+
+#convert til long format
+Sbiol_long <- NS_EwE_bio[,c(3:7)] %>% pivot_longer(!component_m, names_to = "scenario", values_to = "value", names_repair="unique")
+
+Sbiol_long$model <- c("EwE")
+colnames(Sbiol_long)[1] <- c("component")
+
+#sum same biol components
+Sbiol_long <- subset(Sbiol_long, component!="NoMMgroup")
+Sbiol_long <- Sbiol_long %>% dplyr::group_by(component, scenario) %>% dplyr::summarise(value=mean(value))
+Sbiol_long$model <- c("EwE")
+
+
+
+#EWE Catch data
+NS_EwE_catch$component_m <- kmapping$Mmmapping[match(NS_EwE_catch$component, kmapping$EwE)]
+
+Kec <- subset(NS_EwE_catch,component_m!="NoMMgroup" )[,c(2:6)] %>% summarise_all(funs(mean))
+Kec[,1] <- as.character(Kec[,1])
+Kec[1,1] <- c("Fisheries_catch")
+#to long format
+Kec <- Kec %>% pivot_longer(!component, names_to = "scenario", values_to = "value", names_repair="unique") 
+Kec$model <- c("EwE")
+
+
+
+## MM data
+#biol components
+Kqp_long <-  Skag_QP[!is.na(Skag_QP$component_e),][,c(1,14:17)] %>% pivot_longer(!component, names_to = "scenario", values_to = "value", names_repair="unique")
+Kqp_long$model <- c("MM")
+#catch all fisheries
+Kfish <- subset(Skag_QP,component == "Fisheries_D" | component == "Fisheries_P" |  component == "Fisheries_Rec")[,c(1,14:17)] %>% pivot_longer(!component, names_to = "scenario", values_to = "value", names_repair="unique") %>% dplyr::group_by(scenario) %>% dplyr::summarise(value=mean(value))
+Kfish$component <- c("Fisheries_catch")
+Kfish <- Kfish[,c(3,1,2)]
+Kfish$model <- c("MM")
+
+
+#combine biol and catch
+Kqp_long <- rbind(Kqp_long, Kfish)
+
+#normalize all data
+Kqp_long$value <- Kqp_long$value/100+1
+Kqp_long$model <- c("MM")
+
+#Combine data
+Skag_comb <- rbind(Kqp_long, Sbiol_long, Kec)
+
+
+Skag_comb$scenario <- factor(Skag_comb$scenario,levels = c("No fishing","-50%  fishing","Fisheries_decrease", "+25%  fishing","+75%  fishing",   "Fisheries_increase", "marmam_decr", "marmam_incre"))
+
+
+```
+
+#### Skagerrak comparison plots
+```{r Skagerrak comparison plots, echo=FALSE, warning=FALSE}
+
+sc2 <- subset(Skag_comb, (scenario!="marmam_decr" & scenario!="marmam_incre") )
+  
+ggplot(sc2, aes(scenario,value-1, fill=model)) +geom_col(aes(y=scenario, x=value-1)) +theme_bw() + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + theme(axis.title.y = element_blank(), axis.title.x = element_blank()) + ggtitle("Skagerrak") +facet_wrap(vars(component), scales="free_x")
+
+ggsave("./figs/Skagerrak_bio_catch.png", height=18, width=14, units="cm")
+
+```
+#### Skagerrak combined table
+
+```{r comp table Skagerrak, echo=FALSE, warning=FALSE}
+Nor_comb2 <- Skag_comb
+Nor_comb2$value <- Nor_comb2$value-1
+Nor_wide <- Nor_comb2 %>% pivot_wider(names_from = c(scenario, model), values_from=value) #exclude mackerel (not in MM data)
+#Nor_wide <- Nor_wide[,c(1,2,9,6,3,7,8, 4, 5)]
+# Without marine mammal scenarios
+Nor_wide <- Nor_wide[,c(1,2,9,6,3,7,8)]
+#colnames(Nor_wide) <- c("component", "Fisheries_decrease_MM", "No_fishing_EwE", "E-50% _fishing_EwE","Fisheries_increase_MM","E+25%_fishing_EwE", "E+75%_fishing_EwE")    
+
+scale <- scales::col_numeric(domain= c(-1.14, 1.14), palette ="PiYG")  
+ft_2 <- flextable(Nor_wide)
+  ft_2 <- bg(ft_2, j = colnames(Nor_wide)[2:7], bg = scale)
+  ft_2 <- set_formatter_type(ft_2)
+  ft_2  
+  
+ft_2 <- add_header_row(ft_2,  colwidths = c(1, 3, 3),  values = c(" ", "Decrease fisheries", "Increase fisheries"))
+
+#ft_2 <- set_header_labels(ft_2, component = " ", 
+#    Fisheries_decrease_MM = "MM: decrease", "No fishing_EwE" = "EwE: -100%",
+#    "-50%  fishing_EwE" = "EwE: -50%", Fisheries_increase_MM = "MM: increase", "+25%  fishing_EwE" = "EwE: +25%", "+75%  fishing_EwE" = "EwE: +75%", "marmam_decr_MM" ="MM: decrease", "marmam_incre_MM" = "MM: increase"  )
+
+ft_2 <- set_header_labels(ft_2, component = " ", 
+    Fisheries_decrease_MM = "MM: decrease", "No fishing_EwE" = "EwE: -100%",
+    "-50%  fishing_EwE" = "EwE: -50%", Fisheries_increase_MM = "MM: increase", "+25%  fishing_EwE" = "EwE: +25%", "+75%  fishing_EwE" = "EwE: +75%" )
+
+ft_2
+
+
+#export as docx and png
+save_as_docx("Skagerrak. Mental model and EwE comparisons" = ft_2, path = "./figs/Skagerrak_table.docx")
+save_as_image(ft_2, path = "./figs/Skagerrak_table.png")
+```
+#### Skagerrak correlation plots
+```{r skagerrak correlation plots}
+
+ggcorrmat(
+  data = Nor_wide, # data from which variable is to be taken
+  cor.vars = 2:4, # specifying correlation matrix variables
+  #type="nonparametric"
+)
+
+ggsave("./figs/skagerrak_F_decr_corr_plot.png")
+
+ggcorrmat(
+  data = Nor_wide, # data from which variable is to be taken
+  cor.vars = 5:7, # specifying correlation matrix variables
+ # type="nonparametric"
+)
+
+ggsave("./figs/skagerrak_F_incr_corr_plot.png")
+
+
+```
+
+
+
+### Norwegian trench combined data sets
+```{r Nowegian Trench combined data, echo=FALSE, warning=FALSE}
+#NS_EwE_bio$scenario
+#NS_EwE_catch$scenario
+Nor_QP$X1
+
+colnames(Nor_QP)[1] <- c("component")
+colnames(NS_EwE_bio)[2] <- c("component")
+colnames(NS_EwE_catch)[2] <- c("component")
+
+# EWE Biol data
+#map EwE names to MM names
+kmapping <- read_excel("./NS_NorTrench_mapping.xlsx")
+NS_EwE_bio$component_m <- kmapping$Mmmapping[match(NS_EwE_bio$component, kmapping$EwE)]
+
+Nor_QP$component_e <- c("Not_in_MM")
+Nor_QP$component_e <- kmapping$EwE[match(Nor_QP$component, kmapping$Mmmapping)]
+  
+
+#convert til long format
+Sbiol_long <- NS_EwE_bio[,c(3:7)] %>% pivot_longer(!component_m, names_to = "scenario", values_to = "value", names_repair="unique")
+
+Sbiol_long$model <- c("EwE")
+colnames(Sbiol_long)[1] <- c("component")
+
+#sum same biol components
+Sbiol_long <- subset(Sbiol_long, component!="NoMMgroup")
+Sbiol_long <- Sbiol_long %>% group_by(component, scenario) %>% dplyr::summarise(value=mean(value))
+Sbiol_long$model <- c("EwE")
+
+
+
+#EWE Catch data
+NS_EwE_catch$component_m <- kmapping$Mmmapping[match(NS_EwE_catch$component, kmapping$EwE)]
+
+Kec <- subset(NS_EwE_catch,component_m!="NoMMgroup" )[,c(2:6)] %>% dplyr::summarise_all(funs(mean))
+Kec[,1] <- as.character(Kec[,1])
+Kec[1,1] <- c("Fisheries_catch")
+#to long format
+Kec <- Kec %>% pivot_longer(!component, names_to = "scenario", values_to = "value", names_repair="unique") 
+Kec$model <- c("EwE")
+
+
+
+## MM data
+#biol components
+Kqp_long <-  Nor_QP[!is.na(Nor_QP$component_e),][,c(1,8:9)] %>% pivot_longer(!component, names_to = "scenario", values_to = "value", names_repair="unique")
+Kqp_long$model <- c("MM")
+#catch all fisheries
+Kfish <- subset(Nor_QP,component == "Fisheries_ind" | component == "Fisheries_pel" |  component == "Fisheries_shrimp" |  component == "L_mesh_trawling")[,c(1,8:9)] %>% pivot_longer(!component, names_to = "scenario", values_to = "value", names_repair="unique") %>% group_by(scenario) %>% dplyr::summarise(value=mean(value))
+Kfish$component <- c("Fisheries_catch")
+Kfish <- Kfish[,c(3,1,2)]
+Kfish$model <- c("MM")
+
+
+#combine biol and catch
+Kqp_long <- rbind(Kqp_long, Kfish)
+
+#normalize all data
+Kqp_long$value <- Kqp_long$value/100+1
+Kqp_long$model <- c("MM")
+
+#Combine data
+Nor_comb <- rbind(Kqp_long, Sbiol_long, Kec)
+
+
+Nor_comb$scenario <- factor(Nor_comb$scenario,levels = c("No fishing","-50%  fishing","Fisheries_decrease", "+25%  fishing","+75%  fishing",   "Fisheries_increase"))
+
+
+```
+
+#### Norwegian trench comparison plots
+```{r Norwegian trench comparison plots, echo=FALSE, warning=FALSE}
+ggplot(subset(Nor_comb, component != "Mackerel"), aes(scenario,value-1, fill=model)) +geom_col(aes(y=scenario, x=value-1)) +theme_bw() + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1)) + theme(axis.title.y = element_blank(), axis.title.x = element_blank()) + ggtitle("Norwegian Trench") +facet_wrap(~component, scales="free_x")
+
+ggsave("./figs/NorwTrench_bio_catch.png", height=12, width=14, unit="cm")
+```
+
+
+### Table of model responses
+
+```{r comp table Norw trenc, echo=FALSE, warning=FALSE}
+Nor_comb2 <- Nor_comb
+Nor_comb2$value <- Nor_comb2$value-1
+Nor_wide <- subset(Nor_comb2, component != "Mackerel") %>% pivot_wider(names_from = c(scenario, model), values_from=value) #exclude mackerel (not in MM data)
+Nor_wide <- Nor_wide[,c(1,2,7,4,3,5,6)]
+#colnames(Nor_wide) <- c("component", "Fisheries_decrease_MM", "No_fishing_EwE", "E-50% _fishing_EwE","Fisheries_increase_MM","E+25%_fishing_EwE", "E+75%_fishing_EwE")    
+
+scale <- scales::col_numeric(domain= c(-2.21, 2.21), palette ="PiYG")  
+ft_2 <- flextable(Nor_wide)
+  ft_2 <- bg(ft_2, j = colnames(Nor_wide)[2:7], bg = scale)
+  ft_2 <- set_formatter_type(ft_2)
+  ft_2  
+  
+ft_2 <- add_header_row(ft_2,  colwidths = c(1, 3, 3),  values = c(" ", "Decrease fisheries", "Increase fisheries"))
+
+ft_2 <- set_header_labels(ft_2, component = " ", 
+    Fisheries_decrease_MM = "MM: decrease", "No fishing_EwE" = "EwE: -100%",
+    "-50%  fishing_EwE" = "EwE: -50%", Fisheries_increase_MM = "MM: increase", "+25%  fishing_EwE" = "EwE: +25%", "+75%  fishing_EwE" = "EwE: +75%" )
+
+ft_2
+
+
+#export as docx and png
+save_as_docx("Norwegian Trench Mental model and EwE comparisons" = ft_2, path = "./figs/NorwTrench_table.docx")
+save_as_image(ft_2, path = "./figs/NorwTrench_table.png")
+```
+
+#### Norwegian Trench radar plots
+```{r norw trench radar, echo=FALSE, warning=FALSE}
+nw_t <- t(Nor_wide[,2:7])
+colnames(nw_t) <- Nor_wide$component
+
+nw_t <- rbind(rep(1,10) , rep(-1,10) , nw_t)
+
+
+png("radar_norwtrench.png")
+radarchart(as.data.frame(nw_t))
+
+legend(
+  x = "topright", legend = rownames(nw_t[-c(1,2),]), horiz = TRUE,
+  bty = "n", pch = 20 ,
+  text.col = "black", cex = 1, pt.cex = 1.5
+  )
+dev.off()
+
+getwd()
+
+```
+
+
+#### Norwegian trench correlation plots
+```{r norw trench correlation plots}
+
+ggcorrmat(
+  data = Nor_wide, # data from which variable is to be taken
+  cor.vars = 2:4, # specifying correlation matrix variables
+  #type="nonparametric"
+)
+
+ggsave("./figs/NorwTrench_F_decr_corr_plot.png")
+
+ggcorrmat(
+  data = Nor_wide, # data from which variable is to be taken
+  cor.vars = 5:7, # specifying correlation matrix variables
+ # type="nonparametric"
+)
+
+ggsave("./figs/NorwTrench_F_incr_corr_plot.png")
+
+```
+
+
+## PCA analysis of EwE vs MM results
+Cannot carry out a PCA on all data combined because the model components are different for the different regions Must make comparison on a regional basis. 
+
+Southern North Sea has too few components (3) to do a meaningful PCA analysis, so PCA only carried out for Kattegat, Skagerrak and the Norwegian Trench  
+
+###### Skagerrak PCA plot
+```{r PCA Skagerrak, message=FALSE, warning=FALSE}
+sc2$Sce_Mod <- paste(sc2$model, sc2$scenario, sep="  ")
+#Skag_comb$Sce_Mod <- paste(Skag_comb$model, Skag_comb$scenario, sep="  ")
+
+# to wide format
+#am <- Skag_comb[,c(1,3,5)]
+am <- sc2[,c(1,3,5)]
+am$component<-as.factor(am$component)
+
+tst <- am %>% 
+  group_by(Sce_Mod, component) %>%
+  summarise_all(funs(mean)) %>%
+  pivot_wider(names_from = component, values_from= value, values_fill = 0)
+
+rownames(tst) <- as.character(tst$Sce_Mod)
+tst2 <- as.data.frame(t(tst[,c(2:17)]))
+colnames(tst2) <- tst$Sce_Mod
+
+ df_pca <- prcomp(tst2)
+# df_pca2 <- prcomp(t(tst2))
+#df_pca <- prcomp(tst[,c(2:17)])
+
+# PCA biplot (using ggbiplot)
+sk_pca <- ggbiplot(df_pca, labels =  rownames(t(tst2)),labels.size = 2.5, varname.size = 2.5, alpha=0.5) +coord_fixed(xlim=c(-3, 3), ylim=c(-3, 3)) + theme_bw() + ggtitle("Skagerrak")
+sk_pca
+ggsave("./figs/Skagerrak_PCA.png")
+
+
+#### Loadings only plot
+# Extract PC axes for plotting
+PCAvalues <- data.frame(Scenarios = rownames(tst2), df_pca$x)
+
+# Extract loadings of the variables
+PCAloadings <- data.frame(Variables = rownames(df_pca$rotation), df_pca$rotation)
+
+# proportion of variance
+PoV <- df_pca$sdev^2/sum(df_pca$sdev^2)
+
+# Plot
+sk_load <- ggplot(PCAvalues, aes(x = PC1, y = PC2, colour = Species)) +
+  geom_segment(data = PCAloadings, aes(x = 0, y = 0, xend = (PC1*5), yend = (PC2*5)), arrow = arrow(length = unit(1/2, "picas")), color = "gray60", linetype=11) +
+  annotate("text", x = (PCAloadings$PC1*5), y = (PCAloadings$PC2*5), label = PCAloadings$Variables, color="darkblue") +
+  coord_cartesian(xlim=c(-4, 4), ylim=c(-4, 1)) +
+  theme_minimal() + 
+  xlab(paste0("PC1 (", round((PoV[1]*100),digits=1), "%)")) +
+  ylab(paste0("PC2 (", round((PoV[2]*100),digits=1), "%)")) +
+  ggtitle("Skagerrak")
+sk_load
+
+ggsave("./figs/skagerrak_loadings.png")
+
+```
+
+##### Norwegian Trench PCA plot
+```{r PCA NorwTrench, message=FALSE, warning=FALSE}
+Nor_comb$Sce_Mod <- paste(Nor_comb$model, Nor_comb$scenario, sep="  ")
+
+# to wide format
+am <- Nor_comb[,c(1,3,5)]
+am$component<-as.factor(am$component)
+
+tst <- am %>% 
+  group_by(Sce_Mod, component) %>%
+  summarise_all(funs(mean)) %>%
+  pivot_wider(names_from = component, values_from= value, values_fill = 0)
+
+rownames(tst) <- as.character(tst$Sce_Mod)
+tst2 <- as.data.frame(t(tst[,c(2:12)]))
+colnames(tst2) <- tst$Sce_Mod
+
+ df_pca <- prcomp(tst2)
+
+# PCA biplot (using ggbiplot)
+Norwt_pca <- ggbiplot(df_pca, labels =  rownames(tst2),labels.size = 2.5, varname.size = 2.5, alpha=0.5) +coord_fixed(xlim=c(-3, 3), ylim=c(-3, 3)) + theme_bw() +ggtitle("Norwegian Trench")
+Norwt_pca
+ggsave("./figs/NorwTrench_PCA.png")
+
+#### Loadings only plot
+# Extract PC axes for plotting
+PCAvalues <- data.frame(Scenarios = rownames(tst2), df_pca$x)
+
+# Extract loadings of the variables
+PCAloadings <- data.frame(Variables = rownames(df_pca$rotation), df_pca$rotation)
+
+# proportion of variance
+PoV <- df_pca$sdev^2/sum(df_pca$sdev^2)
+
+# Plot
+nt_load <- ggplot(PCAvalues, aes(x = PC1, y = PC2, colour = Species)) +
+  geom_segment(data = PCAloadings, aes(x = 0, y = 0, xend = (PC1*5), yend = (PC2*5)), arrow = arrow(length = unit(1/2, "picas")), color = "gray60", linetype=11) +
+  annotate("text", x = (PCAloadings$PC1*5), y = (PCAloadings$PC2*5), label = PCAloadings$Variables, color="darkblue") +
+  coord_cartesian(xlim=c(-4, 4.5), ylim=c(-4, 4)) +
+  xlab(paste0("PC1 (", round((PoV[1]*100),digits=1), "%)")) +
+  ylab(paste0("PC2 (", round((PoV[2]*100),digits=1), "%)")) +
+  theme_minimal() +ggtitle("Norwegian Trench")
+nt_load 
+  
+ggsave("./figs/NorwTrench_loadings.png")
+
+```
+
+
+
+
+##### Kattegat PCA plot
+The seals X 10 dominates the PCA analysis, and is therefore excluded in the loadings plot to better illuminate how the other scenarios interrelate
+
+```{r PCA Kattegat, message=FALSE, warning=FALSE}
+Katt_comb$Sce_Mod <- paste(Katt_comb$model, Katt_comb$scenario, sep="  ")
+
+# to wide format
+am <- Katt_comb[,c(1,3,5)]
+am$component<-as.factor(am$component)
+
+tst <- am %>% 
+  group_by(Sce_Mod, component) %>%
+  summarise_all(funs(mean)) %>%
+  pivot_wider(names_from = component, values_from= value, values_fill = 0)
+
+rownames(tst) <- as.character(tst$Sce_Mod)
+tst2 <- as.data.frame(t(tst[,c(2:14)]))
+colnames(tst2) <- tst$Sce_Mod
+
+ df_pca <- princomp(tst2, cor=TRUE)
+
+# PCA biplot (using ggbiplot)
+Katt_pca <- ggbiplot(df_pca, labels =  rownames(tst2),labels.size = 2.5, varname.size = 2.5, alpha=0.5, sec.axes = "cols") +coord_fixed(xlim=c(-3, 3), ylim=c(-3, 3)) + theme_bw() +ggtitle("Kattegat")
+Katt_pca
+ggsave("./figs/Kattegat_PCA.png")
+
+
+
+df_pca %>%
+  ggbiplot( sec.axes = "cols", scale.factor = 2, axis.percents=TRUE3) +
+  theme_bw() +   expand_limits(y = c(-3.5, 3.5)) +   expand_limits(x = c(-3.5, 3.5))
+
+
+#### Loadings only plot
+# excluding the Seals X10 scenario
+
+df_pca2 <- prcomp(tst2[c(1:4, 6:10)])
+# Extract PC axes for plotting
+PCAvalues <- data.frame(Scenarios = rownames(tst2), df_pca2$x)
+
+# Extract loadings of the variables
+PCAloadings <- data.frame(Variables = rownames(df_pca2$rotation), df_pca2$rotation)
+
+# proportion of variance
+PoV <- df_pca2$sdev^2/sum(df_pca2$sdev^2)
+
+# Plot
+ka_load <- ggplot(PCAvalues, aes(x = PC1, y = PC2, colour = Species)) +
+  geom_segment(data = PCAloadings, aes(x = 0, y = 0, xend = (PC1*5), yend = (PC2*5)), arrow = arrow(length = unit(1/2, "picas")), color = "gray60", linetype=11) +
+  annotate("text", x = (PCAloadings$PC1*5), y = (PCAloadings$PC2*5), label = PCAloadings$Variables, color="darkblue") +
+  coord_cartesian(xlim=c(-3.7,3.5), ylim=c(-3, 2.5)) +
+  theme_minimal() +
+  xlab(paste0("PC1 (", round((PoV[1]*100),digits=1), "%)")) +
+  ylab(paste0("PC2 (", round((PoV[2]*100),digits=1), "%)")) +
+  ggtitle("Kattegat")
+ka_load
+  
+ggsave("./figs/Kattegat_loadings.png")
+
+
+
+```
+
+#### Combine PCAs in one plot
+```{r combine PCAs, echo=FALSE, warning= FALE}
+
+#sk_pca + Katt_pca + Norwt_pca
+
+load_comb <- sk_load / ka_load / nt_load
+load_comb
+
+ggsave("./figs/loadings_combined.png", unit="cm", width=20, height=40)
+
+```
+

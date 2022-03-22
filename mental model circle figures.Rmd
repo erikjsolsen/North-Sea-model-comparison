@@ -1,0 +1,255 @@
+---
+title: "mental models circular figures"
+author: "Erik Olsen"
+date: "10/2/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Intro/background
+This script produces beautiful circular figur representation of qualitative models developed using the [mental modeller software](www.mentalmodeler.org) for the Southern North Sea, Kattegat, Skagerrak and Norwegian Trench as part of the work of ICES WGINOSE 2017 - 2020.   
+
+The figure for the Southern North Sea is created seperately as the categories are different than those for the other three models and hence it was not possible to use the same function to create it  
+
+The code is borrowed from Geret dePiper at NOAA NEFSC who used it to publish the WGNARS qualitative model in the [2017 ICES JMS Article](https://academic.oup.com/icesjms/article/74/8/2076/3094701) : ![](/Users/eriko/ownCloud/Research/WGINOSE/mentalmodel/fig4deppiper.png) 
+
+```{r libaries, echo=FALSE, warning=FALSE, message=FALSE}
+#PKG <- c("foreign","foodweb","sna","DiagrammeR","circlize","RColorBrewer", "data.table")
+
+#for (p in PKG) {
+#  if(!require(p,character.only = TRUE)) {  
+#    install.packages(p)
+#   require(p,character.only = TRUE)}
+#}
+
+library(foreign)
+#library(foodweb)
+library(sna)
+library(DiagrammeR)
+library(circlize)
+library(RColorBrewer)
+library(data.table)
+```
+
+### Function to create figure
+```{r load data, echo=FALSE, warning=FALSE, message=FALSE}
+source("./functions/circulargraphrcode_func.R")
+```
+
+## Southern North sea
+Run the separate script ** SNS_circ_graph.R** 
+
+## Kattegat model
+```{r kattegat model, echo=FALSE, warning=FALSE, message=FALSE, results="hide"}
+modelfile <- c("./data/2019_Kattegat/Kattegat_WKKEMSSP_2019_final.csv")
+nodefile <- c("./data/2019_Kattegat/Kattegat_nodes.csv")
+figurename <- c("./figs/kattegat2019_circ_v2")
+
+# need to run code line-by-line because of error in plot when using function
+#data
+Grand_Banks <- read.csv2(modelfile,as.is=TRUE, dec=".", row.names=1)
+
+SNS_nodes <-  read.csv2(nodefile, dec=".")
+nnodes <- data.table::as.data.table(SNS_nodes)
+  
+  #Grand_Banks_edges <- data.matrix(Grand_Banks)
+  Grand_Banks_edges <- data.matrix(Grand_Banks[,c(2:36)], rownames.force = Grand_Banks[,1])
+  
+  #colnames(Grand_Banks_edges) <- row.names(Grand_Banks)
+  
+  activity <- c(nnodes[category=="activity"]$node)
+  management <- c(nnodes[category=="management"]$node)
+  objective <- c(nnodes[category=="objective"]$node)
+  ecosyst <- c(nnodes[category=="ecosyst"]$node)
+  pressure <- c(nnodes[category=="pressure"]$node)
+  
+    #Colors
+    GB_C <- brewer.pal(5,"Set1")
+    
+    GB_Colors <- data.frame(row.names(Grand_Banks))
+    colnames(GB_Colors) <- "Focus"
+    GB_Colors$Color <- GB_C[2]
+    #GB_Colors$Color[GB_Colors$Focus%in%socioeco] <- GB_C[2]
+    
+    GB_Colors$Color[GB_Colors$Focus%in%activity] <- GB_C[5]
+    GB_Colors$Color[GB_Colors$Focus%in%management] <- GB_C[4]
+    GB_Colors$Color[GB_Colors$Focus%in%objective] <- GB_C[1]
+    GB_Colors$Color[GB_Colors$Focus%in%ecosyst] <- GB_C[3]
+  
+  GB_Colors <- GB_Colors[order(GB_Colors$Color,GB_Colors$Focus),]
+  GB_Colors2 <- GB_Colors$Color
+  names(GB_Colors2) <- GB_Colors$Focus
+  
+    png(paste(figurename, ".png", sep=""),width = 1400, height=1400)
+   print(chordDiagram(Grand_Banks_edges, directional=1, direction.type = c("diffHeight", "arrows"), link.arr.type = "big.arrow",scale=TRUE, order=GB_Colors$Focus, 
+                      transparency = 0.6,
+                   grid.col = GB_Colors2,
+                   row.col = GB_Colors2,
+                   #link.lty = Border_mat,
+                   # link.lwd = Border_w,
+                  # link.border = Border_Col,
+                   annotationTrackHeight = c(0.03, 0.1),
+                   annotationTrack="grid",preAllocateTracks= list(track.height=0.4)))
+   
+   
+      print(circos.trackPlotRegion(track.index=1, panel.fun= function (x,y){
+          xlim = get.cell.meta.data("xlim")
+          ylim = get.cell.meta.data("ylim")
+          sector.name = get.cell.meta.data("sector.index")
+          circos.text(mean(xlim),ylim[1],sector.name,facing="clockwise", niceFacing=TRUE, adj =c(0,0.5), cex=2.2)
+        }, bg.border=NA) )
+      
+      print(legend(x=-1.1,y = 1.09,legend = c("Objectives","Pressure","Ecosystem","Activities","Management"),lty= c(1,1,1,1,1), lwd=c(15,15,15,15,15), 
+             col =c(GB_C[1],GB_C[2],GB_C[3],GB_C[5],GB_C[4]), ncol=1, cex = 2.5, bg = NULL, box.col=NULL, bty = "n"))
+      #print(title(main="Grand Banks", line=-35))
+
+dev.off()
+
+```
+
+
+## Skagerrak model
+```{r skagerrak model, echo=FALSE, warning=FALSE, message=FALSE, results="hide"}
+modelfile <- c("./data/2018_WGINOSE/Skagerrak_190418.csv")
+nodefile <- c("./data/2018_WGINOSE/Skagerrak_nodes.csv")
+figurename <- c("./figs/skagerrak2018_circ")
+
+# need to run code line-by-line because of error in plot when using function
+#data
+Grand_Banks <- read.csv2(modelfile,as.is=TRUE, dec=".", row.names=1)
+
+SNS_nodes <-  read.csv2(nodefile, dec=".")
+nnodes <- data.table::as.data.table(SNS_nodes)
+  
+  #Grand_Banks_edges <- data.matrix(Grand_Banks)
+  Grand_Banks_edges <- data.matrix(Grand_Banks[,c(2:36)], rownames.force = Grand_Banks[,1])
+  
+  #colnames(Grand_Banks_edges) <- row.names(Grand_Banks)
+  
+  activity <- c(nnodes[category=="activity"]$node)
+  management <- c(nnodes[category=="management"]$node)
+  objective <- c(nnodes[category=="objective"]$node)
+  ecosyst <- c(nnodes[category=="ecosyst"]$node)
+  pressure <- c(nnodes[category=="pressure"]$node)
+  
+    #Colors
+    GB_C <- brewer.pal(5,"Set1")
+    
+    GB_Colors <- data.frame(row.names(Grand_Banks))
+    colnames(GB_Colors) <- "Focus"
+    GB_Colors$Color <- GB_C[2]
+    #GB_Colors$Color[GB_Colors$Focus%in%socioeco] <- GB_C[2]
+    
+    GB_Colors$Color[GB_Colors$Focus%in%activity] <- GB_C[5]
+    GB_Colors$Color[GB_Colors$Focus%in%management] <- GB_C[4]
+    GB_Colors$Color[GB_Colors$Focus%in%objective] <- GB_C[1]
+    GB_Colors$Color[GB_Colors$Focus%in%ecosyst] <- GB_C[3]
+  
+  GB_Colors <- GB_Colors[order(GB_Colors$Color,GB_Colors$Focus),]
+  GB_Colors2 <- GB_Colors$Color
+  names(GB_Colors2) <- GB_Colors$Focus
+  
+    png(paste(figurename, ".png", sep=""),width = 1400, height=1400)
+   print(chordDiagram(Grand_Banks_edges, directional=1, direction.type = c("diffHeight", "arrows"), link.arr.type = "big.arrow",scale=TRUE, order=GB_Colors$Focus, 
+                      transparency = 0.6,
+                   grid.col = GB_Colors2,
+                   row.col = GB_Colors2,
+                 #  link.lty = Border_mat,
+                  # link.lwd = Border_w,
+                  # link.border = Border_Col,
+                   annotationTrackHeight = c(0.03, 0.1),
+                   annotationTrack="grid",preAllocateTracks= list(track.height=0.4)))
+   
+   
+      print(circos.trackPlotRegion(track.index=1, panel.fun= function (x,y){
+          xlim = get.cell.meta.data("xlim")
+          ylim = get.cell.meta.data("ylim")
+          sector.name = get.cell.meta.data("sector.index")
+          circos.text(mean(xlim),ylim[1],sector.name,facing="clockwise", niceFacing=TRUE, adj =c(0,0.5), cex=2.2)
+        }, bg.border=NA) )
+      
+      print(legend(x=-1.1,y = 1.09,legend = c("Objectives","Pressure","Ecosystem","Activities","Management"),lty= c(1,1,1,1,1), lwd=c(15,15,15,15,15), 
+             col =c(GB_C[1],GB_C[2],GB_C[3],GB_C[5],GB_C[4]), ncol=1, cex = 2.5, bg = NULL, box.col=NULL, bty = "n"))
+      #print(title(main="Grand Banks", line=-35))
+
+dev.off()
+
+
+```
+
+
+## Norwegian trench model
+```{r Norw Trench model, echo=FALSE, warning=FALSE, message=FALSE, results="hide"}
+modelfile <- c("./data/2019_NorwTrench/NorwTrench_eng.csv")
+nodefile <- c("./data/2019_NorwTrench/NorwTrench_nodes.csv")
+figurename <- c("./figs/NorwTrench2019_circ")
+
+#MM_cgraph(modelfile, nodefile, figurename)
+
+# need to run code line-by-line because of error in plot when using function
+#data
+Grand_Banks <- read.csv2(modelfile,as.is=TRUE, dec=".", row.names=1)
+
+SNS_nodes <-  read.csv2(nodefile, dec=".")
+nnodes <- data.table::as.data.table(SNS_nodes)
+  
+  #Grand_Banks_edges <- data.matrix(Grand_Banks)
+  Grand_Banks_edges <- data.matrix(Grand_Banks[,c(2:28)], rownames.force = Grand_Banks[,1])
+  
+  #colnames(Grand_Banks_edges) <- row.names(Grand_Banks)
+  
+  activity <- c(nnodes[category=="activity"]$node)
+  management <- c(nnodes[category=="management"]$node)
+  objective <- c(nnodes[category=="objective"]$node)
+  ecosyst <- c(nnodes[category=="ecosyst"]$node)
+  pressure <- c(nnodes[category=="pressure"]$node)
+  
+    #Colors
+    GB_C <- brewer.pal(5,"Set1")
+    
+    GB_Colors <- data.frame(row.names(Grand_Banks))
+    colnames(GB_Colors) <- "Focus"
+    GB_Colors$Color <- GB_C[2]
+    #GB_Colors$Color[GB_Colors$Focus%in%socioeco] <- GB_C[2]
+    
+    GB_Colors$Color[GB_Colors$Focus%in%activity] <- GB_C[5]
+    GB_Colors$Color[GB_Colors$Focus%in%management] <- GB_C[4]
+    GB_Colors$Color[GB_Colors$Focus%in%objective] <- GB_C[1]
+    GB_Colors$Color[GB_Colors$Focus%in%ecosyst] <- GB_C[3]
+  
+  GB_Colors <- GB_Colors[order(GB_Colors$Color,GB_Colors$Focus),]
+  GB_Colors2 <- GB_Colors$Color
+  names(GB_Colors2) <- GB_Colors$Focus
+  
+  
+    png(paste(figurename, ".png", sep=""),width = 1400, height=1400)
+   print(chordDiagram(Grand_Banks_edges, directional=1, direction.type = c("diffHeight", "arrows"), link.arr.type = "big.arrow",scale=TRUE, order=GB_Colors$Focus, 
+                      transparency = 0.6,
+                   grid.col = GB_Colors2,
+                   row.col = GB_Colors2,
+                  # link.lty = Border_mat,
+                  # link.lwd = Border_w,
+                  # link.border = Border_Col,
+                   annotationTrackHeight = c(0.03, 0.1),
+                   annotationTrack="grid",preAllocateTracks= list(track.height=0.4)))
+   
+   
+      print(circos.trackPlotRegion(track.index=1, panel.fun= function (x,y){
+          xlim = get.cell.meta.data("xlim")
+          ylim = get.cell.meta.data("ylim")
+          sector.name = get.cell.meta.data("sector.index")
+          circos.text(mean(xlim),ylim[1],sector.name,facing="clockwise", niceFacing=TRUE, adj =c(0,0.5), cex=2.2)
+        }, bg.border=NA) )
+      
+      print(legend(x=-1.1,y = 1.09,legend = c("Objectives","Pressure","Ecosystem","Activities","Management"),lty= c(1,1,1,1,1), lwd=c(15,15,15,15,15), 
+             col =c(GB_C[1],GB_C[2],GB_C[3],GB_C[5],GB_C[4]), ncol=1, cex = 2.5, bg = NULL, box.col=NULL, bty = "n"))
+      #print(title(main="Grand Banks", line=-35))
+
+dev.off()
+
+
+
+```
