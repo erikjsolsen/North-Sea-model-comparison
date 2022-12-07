@@ -1,0 +1,185 @@
+---
+title: "MM FCM metrics"
+author: "Erik Olsen"
+date: "8/17/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Exploring the metrics of the Mental models
+This script loads the mental models from CSV files and calculates basic metrics (indegree, outdegree etc) and then uses the FCM package to calculate the stable states of each variable
+
+## Libraries
+```{r libraries}
+library(fcm)
+library(readxl)
+library(igraph)
+library(kableExtra)
+```
+
+## Load data
+```{r data}
+# Load mental models
+
+SNS <- read.csv2("./data/2018_Dutch_Stakeholders/SouthNS_dutch.csv", dec=".")
+SNS[is.na(SNS)] <- 0
+SNS <- SNS[2:23]
+rownames(SNS) <- colnames (SNS)
+
+skagerrak<- read.csv2("./data/2018_WGINOSE/Skagerrak_190418.csv", dec=".")
+skagerrak[is.na(skagerrak)] <- 0
+skagerrak <- skagerrak[2:37]
+rownames(skagerrak) <- colnames(skagerrak)
+
+kattegat<- read.csv2("./data/2019_Kattegat/Kattegat_WKKEMSSP_2019_final.csv", dec=".")
+kattegat[is.na(kattegat)] <- 0
+kattegat <- kattegat[2:64]
+rownames(kattegat) <- colnames(kattegat)
+
+NorwTrench <- read_excel("./data/2019_NorwTrench/NorwTrench_eng_oct20.xlsx")
+#sapply(NorwTrench[2:29], class)
+i <- c(2:29)
+NorwTrench[ , i] <- apply(NorwTrench[ , i], 2, function(x) as.numeric(as.character(x)))
+
+NorwTrench[2:29][is.na(NorwTrench[2:29])] <- 0
+NorwTrench <- NorwTrench[2:29]
+rownames(NorwTrench) <- colnames(NorwTrench)
+
+
+#Load EwW models
+
+min_max_norm <- function(x) {
+    (x - min(x)) / (max(x) - min(x))
+  }
+
+## North Sea EwE
+ns <- read_excel("./data/EwE_diet/NS diet matrix EwE key run.xlsx", sheet=5)
+ns <- as.data.frame(ns)
+rownames(ns) <- ns[,1]
+ns1 <- data.matrix(ns[,c(2:81)], rownames.force = ns[,1])
+ns2 <- as.data.frame(lapply(as.data.frame(ns1), min_max_norm), row.names=ns[,1])
+ns2[is.na(ns2)] <- 0
+
+
+## Kattegat data
+katt <- read_excel("./data/EwE_diet/Kattegat_diet_matrix.xlsx", sheet=1)
+katt <- as.data.frame(katt)
+rownames(katt) <- katt[,1]
+katt1 <- data.matrix(katt[,c(2:40)], rownames.force = katt[,1])
+katt2 <- as.data.frame(lapply(as.data.frame(katt1), min_max_norm), row.names=katt[,1])
+katt2[is.na(katt2)] <- 0
+```
+
+
+## Basic FCM metrics
+```{r FCM metrics}
+# Outdegree (rowsums)
+SNS.out <- rowSums(abs(SNS))
+skagerrak.out <- rowSums(abs(skagerrak))
+kattegat.out <- rowSums(abs(kattegat))
+NorwTrench.out <- rowSums(abs(NorwTrench))
+kattegat.ewe.out <- rowSums(abs(katt2))
+ns.ewe.out <- rowSums(abs(ns2))
+
+# Indegree (colsums)
+SNS.in <- colSums(abs(SNS))
+skagerrak.in <- colSums(abs(skagerrak))
+kattegat.in <- colSums(abs(kattegat))
+NorwTrench.in <- colSums(abs(NorwTrench))
+kattegat.ewe.in <- colSums(abs(katt2))
+ns.ewe.in <- colSums(abs(ns2))
+
+# Centrality (outdegree + indegree)
+SNS.c <- SNS.out + SNS.in
+skagerrak.c <- skagerrak.out + skagerrak.in
+kattegat.c <- kattegat.out + kattegat.in
+NorwTrench.c <- NorwTrench.out + NorwTrench.in
+kattegat.ewe.c <- kattegat.ewe.out + kattegat.ewe.in
+ns.ewe.c <- ns.ewe.out + ns.ewe.in
+
+#hierarchy index
+#SNS
+so <- 0
+for (i in 1:length(SNS.out)){
+  so <- so + ((SNS.out[i] - sum(SNS.out))/length(SNS.out))^2
+}
+
+SNS.h <- (12 / ((length(SNS.out)-1) * length(SNS.out) * (length(SNS.out)+1)) ) * so
+
+#skagerrak MM
+so <- 0
+for (i in 1:length(skagerrak.out)){
+  so <- so + ((skagerrak.out[i] - sum(skagerrak.out))/length(skagerrak.out))^2
+}
+
+skagerrak.h <- (12 / ((length(skagerrak.out)-1) * length(skagerrak.out) * (length(skagerrak.out)+1)) ) * so
+
+#kattegat MM
+so <- 0
+for (i in 1:length(kattegat.out)){
+  so <- so + ((kattegat.out[i] - sum(kattegat.out))/length(kattegat.out))^2
+}
+
+kattegat.h <- (12 / ((length(kattegat.out)-1) * length(kattegat.out) * (length(kattegat.out)+1)) ) * so
+
+
+#NorwTrench MM
+so <- 0
+for (i in 1:length(NorwTrench.out)){
+  so <- so + ((NorwTrench.out[i] - sum(NorwTrench.out))/length(NorwTrench.out))^2
+}
+
+NorwTrench.h <- (12 / ((length(NorwTrench.out)-1) * length(NorwTrench.out) * (length(NorwTrench.out)+1)) ) * so
+
+#kattegat EWE
+so <- 0
+for (i in 1:length(kattegat.ewe.out)){
+  so <- so + ((kattegat.ewe.out[i] - sum(kattegat.ewe.out))/length(kattegat.ewe.out))^2
+}
+
+kattegat.ewe.h <- (12 / ((length(kattegat.ewe.out)-1) * length(kattegat.ewe.out) * (length(kattegat.ewe.out)+1)) ) * so
+
+
+#North Sea EwE
+so <- 0
+for (i in 1:length(ns.ewe.out)){
+  so <- so + ((ns.ewe.out[i] - sum(ns.ewe.out))/length(ns.ewe.out))^2
+}
+
+ns.ewe.h <- (12 / ((length(ns.ewe.out)-1) * length(ns.ewe.out) * (length(ns.ewe.out)+1)) ) * so
+
+#Metrics for EwE models
+```
+
+#### Create table of statistics
+```{r table of statistics}
+
+hier <- c(SNS.h, skagerrak.h, kattegat.h, NorwTrench.h, kattegat.ewe.h, ns.ewe.h)
+nnodes <- c(length(SNS.out), length(skagerrak.out), length(kattegat.out), length(NorwTrench.out), length(kattegat.ewe.out), length(ns.ewe.out))
+nlinks <- c(sum(SNS>0), sum(skagerrak>0), sum(kattegat>0), sum(NorwTrench>0), sum(katt2>0), sum(ns2>0) )
+linksprnodes <- nlinks/nnodes
+            
+mtable <- rbind(nnodes, nlinks, linksprnodes, hier)
+colnames(mtable) <- c("SNS", "Skagerrak", "Kattegat", "NorwTrench", "Kattegat_EwE", "NorthSea_EwE")
+
+mtable <- t(mtable) 
+
+mtable %>% 
+    kable(digits=c(0,0,1,3)) 
+
+write.csv(mtable, "./output/modeltable.csv")
+```
+
+
+## FCM Inferences (FCM package)
+```{r FCM inferences}
+#activation matricies
+SNS.act <- data.frame(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
+
+SNS.fcm <- fcm.infer(SNS.act, SNS)
+
+```
+

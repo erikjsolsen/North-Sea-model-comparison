@@ -40,7 +40,7 @@ katt <- read_excel("./data/EwE_diet/Kattegat_diet_matrix.xlsx", sheet=1)
 katt <- as.data.frame(katt)
 rownames(katt) <- katt[,1]
 
-katt1 <- data.matrix(katt[,c(2:37)], rownames.force = katt[,1])
+katt1 <- data.matrix(katt[,c(2:40)], rownames.force = katt[,1])
 
 ```
 
@@ -152,7 +152,7 @@ print(circos.trackPlotRegion(track.index=1, panel.fun= function (x,y){
 
 print(title("Kattegat EwE model", cex=2))
 
-print(legend(x=-1.1,y = 1.09,legend = c("Seabirds", "Mammals", "Fish", "Zooplankton", "Benthos", "Crustaceans", "Molluscs", "Phytoplankton", "Microalgea", "Detritus", "Import", "Fisheries" ),lty= c(1,1,1,1,1,1,1,1,1,1,1,1), lwd=c(25,25,25,25,25,25,25,25,25,25,25,25),              col =p2, ncol=1, cex = 1.5, bg = NULL, box.col=NULL, bty = "n"))
+print(legend(x=-1.1,y = 1.09,legend = c("Seabirds", "Mammals", "Fish", "Zooplankton", "Benthos", "Crustaceans", "Meiofauna", "Phytoplankton", "Microalgea", "Detritus", "Import", "Fisheries" ),lty= c(1,1,1,1,1,1,1,1,1,1,1,1), lwd=c(25,25,25,25,25,25,25,25,25,25,25,25),              col =p2, ncol=1, cex = 1.5, bg = NULL, box.col=NULL, bty = "n"))
 
 ```
 
